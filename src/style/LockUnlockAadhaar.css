@@ -1,0 +1,2504 @@
+
+.help-icon-lockunlock{
+
+
+
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+  background: linear-gradient(135deg, #e7a40a, #f0c114);
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+    transition: transform 0.1s;
+
+}
+.lock-unlock-container {
+  /* 🔹 NUCLEAR OPTION: Force Full Screen & Center */
+  position: fixed; 
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999; /* Sit on top of everything */
+  
+  background-color: #f8f9fa; /* Light grey background */
+  
+  display: flex;             
+  justify-content: center;   /* Center Horizontally */
+  align-items: center;       /* Center Vertically */
+  
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  overflow-y: auto;          /* Scroll if screen is too small */
+}
+/* Top Left Back Button */
+.top-back-btn {
+  position: absolute;
+  top: 250px;
+  left: 850px;
+  padding: 8px 18px;
+  font-size: 15px;
+  border-radius: 6px;
+  border: none;
+  background-color: #008CBA;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s ease;
+  z-index: 1000;
+}
+.top-back-btn {
+  position: absolute;
+  top: 80px;     /* distance from top */
+  left: 60px;    /* distance from left */
+
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;      /* makes it circle */
+
+  background: #f57c00;     /* orange */
+  color: #fff;
+  border: none;
+
+  font-size: 24px;
+  font-weight: bold;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+  transition: all 0.2s ease;
+
+  z-index: 1000;
+}
+
+.top-back-btn:hover {
+  background-color: #006f98;
+}
+.kiosk-back-circle-login {
+  /* position: absolute; */
+  top: -95px;     /* pushes above the card */
+  left: 20px;
+
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #d32f2f;  /* red like reference */
+  color: #fff;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-shadow: 0 6px 12px rgba(0,0,0,0.25);
+  z-index: 10;
+}
+
+
+/* ================================
+   MAIN CARD CONTAINER
+================================ */
+.form-card {
+  width: 90%;               
+  max-width: 1100px;      
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.15); 
+  overflow: hidden;
+  position: relative;
+}
+
+/* 🟡 YELLOW HEADER BAR */
+.form-card-header {
+  background: linear-gradient(135deg, #f7b42c, #fc8717);
+  padding: 20px 30px;
+  color: #fff;
+  text-align: left;
+}
+
+.header-title {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 600;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+/* ================================
+   CARD BODY (Content Area)
+================================ */
+.form-card-body {
+  padding: 40px;
+}
+
+.section-title {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: #0b5ed7; /* Official Blue */
+}
+
+/* ================================
+   GRID LAYOUT (3 Columns)
+================================ */
+.how-it-works-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+/* ================================
+   INFO CARDS (Dashed Blue Boxes)
+================================ */
+.info-card {
+  display: flex;
+  align-items: flex-start;
+  border: 2px dashed #8a9bbd; /* Dashed Blue Border */
+  border-radius: 8px;
+  padding: 25px;
+  background-color: #f8fbff;
+  min-height: 140px;
+  transition: background-color 0.2s;
+}
+
+.info-card:hover {
+  background-color: #f0f7ff;
+}
+
+.card-icon-box {
+  flex-shrink: 0;
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+  border: 1px solid #cce0ff;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20px;
+}
+
+.icon-text, .icon-emoji {
+  font-weight: bold;
+  font-size: 20px;
+  color: #0b5ed7;
+}
+
+.card-text h4 {
+  margin: 0 0 8px 0;
+  font-size: 17px;
+  font-weight: 700;
+  color: #000;
+}
+
+.card-text p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #444;
+}
+.error-text {
+  color: red;
+  font-size: 13px;
+  margin-top: 5px;
+}
+
+/* ================================
+   HELPER TEXT ROW
+================================ */
+.helper-text-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-bottom: 40px;
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+}
+
+.helper-item p {
+  font-size: 13px;
+  color: #555;
+  line-height: 1.6;
+}
+
+.helper-item a {
+  color: #0b5ed7;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.example-text {
+  display: block;
+  margin-top: 4px;
+  color: #777;
+  font-style: italic;
+}
+
+/* ================================
+   FOOTER BUTTONS
+================================ */
+.form-footer {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 10px;
+}
+
+.btn-back {
+  padding: 12px 50px;
+  border: 1px solid #0b5ed7;
+  background: white;
+  color: #0b5ed7;
+  font-weight: 600;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.2s;
+  font-size: 16px;
+}
+
+.btn-back:hover {
+  background: #eff6ff;
+}
+
+.btn-next {
+  padding: 12px 50px;
+  background: #024898; /* Dark Blue */
+  color: white;
+  border: none;
+  font-weight: 600;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.2s;
+  font-size: 16px;
+}
+
+.btn-next:hover {
+  background: #003366;
+}
+
+/* Responsive for Mobile */
+@media (max-width: 900px) {
+  .how-it-works-grid, .helper-text-row {
+    grid-template-columns: 1fr; /* Stack vertically on small screens */
+  }
+}
+
+/* =========================================
+   STEP 2: SPLIT LAYOUT (Form + FAQ)
+========================================= */
+
+/* The main white card wrapper */
+.split-card-wrapper {
+  display: flex;
+  width: 95%;
+  max-width: 1200px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  overflow: hidden;
+  margin-top: 20px;
+  min-height: 500px;
+}
+
+/* --- LEFT SIDE: FORM --- */
+.form-section {
+  flex: 3; /* Takes up 60-70% width */
+  padding: 40px;
+  border-right: 1px solid #eee;
+}
+
+.form-blue-header {
+  color: #008CBA; /* UIDAI Light Blue */
+  font-size: 18px;
+  margin-bottom: 25px;
+  font-weight: 500;
+}
+
+.radio-row {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+html[lang="hi"] .simple-input,
+html[lang="hi"] .labelText {
+  font-size: 18px;
+}
+.radio-label-simple {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  color: #333;
+}
+
+.radio-text {
+  position: relative;
+  top: 1px;
+}
+
+/* Clean Input Style (Like Screenshot) */
+.clean-input {
+  width: 100%;
+  padding: 12px 10px;
+  font-size: 16px;
+  border: 1px solid #ccc; /* Full border box */
+  border-radius: 4px;
+  margin-bottom: 25px;
+  outline: none;
+  transition: border 0.3s;
+}
+
+.clean-input:focus {
+  border-color: #008CBA;
+  box-shadow: 0 0 0 2px rgba(0, 140, 186, 0.1);
+}
+
+/* Captcha specific */
+.captcha-row-simple {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  margin-bottom: 25px;
+}
+
+.captcha-input {
+  flex: 1;
+  margin-bottom: 0;
+}
+
+.captcha-display-box {
+  flex: 0 0 160px; /* Fixed width */
+  height: 48px;
+  background: #f2f2f2;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  justify-content: space-between;
+}
+
+.captcha-code-text {
+  font-family: 'Courier New', monospace;
+  font-weight: bold;
+  font-size: 20px;
+  letter-spacing: 3px;
+}
+
+.captcha-icons {
+  display: flex;
+  gap: 5px;
+}
+
+.icon-btn-small {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 0;
+}
+
+.send-otp-btn-lock {
+  background-color: #024898;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.send-otp-btn-lock:disabled {
+  background-color: #cfcfcf !important;
+  cursor: not-allowed !important;
+  opacity: 0.6 !important;
+  pointer-events: none !important;
+}
+
+/* --- RIGHT SIDE: FAQ --- */
+.faq-section {
+  flex: 2; /* Takes up 30-40% width */
+  padding: 30px;
+  background-color: #f9f9f9;
+}
+
+.faq-header {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.faq-header::before {
+  content: "💬"; /* Simple icon placeholder */
+  font-size: 20px;
+}
+
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.faq-item {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.faq-question {
+  padding: 15px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+}
+
+.faq-question:hover {
+  background-color: #f0f8ff;
+}
+
+.faq-answer {
+  padding: 15px;
+  font-size: 13px;
+  color: #555;
+  line-height: 1.5;
+  border-top: 1px solid #eee;
+  background-color: #fafafa;
+  animation: slideDown 0.3s ease-out;
+}
+
+.arrow-icon {
+  font-size: 10px;
+  color: #888;
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive Stack */
+@media (max-width: 900px) {
+  .split-card-wrapper {
+    flex-direction: column;
+  }
+  .form-section {
+    border-right: none;
+    border-bottom: 1px solid #eee;
+  }
+}
+
+/* ================================
+   FAQ MODAL STYLES
+================================ */
+.faq-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 20000;
+  backdrop-filter: blur(2px);
+}
+
+.faq-modal-content {
+  background: white;
+  width: 90%;
+  max-width: 600px;
+  max-height: 80vh;
+  border-radius: 8px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+  display: flex;
+  flex-direction: column;
+  animation: slideUp 0.3s ease-out;
+}
+
+.faq-modal-header {
+  background: linear-gradient(135deg, #f7b42c, #fc8717);
+  padding: 15px 20px;
+  border-radius: 8px 8px 0 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+
+.faq-modal-header h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.close-modal-btn {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.faq-modal-body {
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.faq-item-modal {
+  margin-bottom: 20px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+
+.faq-q {
+  font-size: 15px;
+  color: #0b5ed7;
+  margin: 0 0 5px 0;
+  font-weight: 600;
+}
+
+.faq-a {
+  font-size: 14px;
+  color: #333;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Help Button Style */
+.help-btn {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #fc8717; /* Matches Header */
+  color: white;
+  border: none;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 15px;
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ================================
+   INPUTS WITH KEYBOARD ICON
+================================ */
+.with-keyboard {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 25px;
+}
+
+.with-keyboard .clean-input {
+  margin-bottom: 0; /* Remove default margin */
+  padding-right: 50px; /* Make space for keyboard icon */
+}
+
+.keyboard-btn {
+  position: absolute;
+  right: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 5px;
+}
+
+.keyboard-btn:hover svg {
+  stroke: #0b5ed7; /* Blue on hover */
+  opacity: 1;
+}
+
+/* ================================
+   FAQ MODAL STYLES (Z-Index Fix)
+================================ */
+.faq-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 99999; /* Highest priority */
+  backdrop-filter: blur(3px);
+}
+
+.faq-modal-content {
+  background: white;
+  width: 90%;
+  max-width: 600px;
+  max-height: 80vh;
+  border-radius: 8px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.4);
+  display: flex;
+  flex-direction: column;
+  animation: slideUp 0.3s ease-out;
+}
+
+.faq-modal-header {
+  background: linear-gradient(135deg, #f7b42c, #fc8717);
+  padding: 15px 25px;
+  border-radius: 8px 8px 0 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+
+.faq-modal-header h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.close-modal-btn {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.faq-modal-body {
+  padding: 25px;
+  overflow-y: auto;
+}
+
+.faq-item-modal {
+  margin-bottom: 20px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+
+.faq-q {
+  font-size: 15px;
+  color: #0b5ed7;
+  margin: 0 0 8px 0;
+  font-weight: 600;
+}
+
+.faq-a {
+  font-size: 14px;
+  color: #333;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Help Button Style */
+.help-btn {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #fc8717; /* Matches Header */
+  color: white;
+  border: none;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 15px;
+  transition: transform 0.2s;
+}
+
+.help-btn:hover {
+  transform: scale(1.1);
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ================================
+   VIRTUAL KEYBOARD (Dark Theme)
+================================ */
+.virtual-keyboard-overlay {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #1a1a1a; /* Dark background like screenshot */
+  padding: 15px 10px;
+  z-index: 20000;
+  box-shadow: 0 -4px 10px rgba(0,0,0,0.3);
+  animation: slideUpKey 0.3s ease-out;
+  display: flex;
+  justify-content: center;
+}
+
+.virtual-keyboard {
+  width: 100%;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.kb-row {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+}
+
+.kb-row button {
+  background: #333;
+  color: white;
+  border: 1px solid #444;
+  border-radius: 5px;
+  padding: 10px 15px; /* Bigger buttons */
+  font-size: 18px;
+  cursor: pointer;
+  min-width: 45px;
+  transition: background 0.1s;
+}
+
+.kb-row button:active {
+  background: #555;
+}
+
+.kb-special {
+  background: #444 !important;
+  font-weight: bold;
+}
+
+.done-btn {
+  background: #0b5ed7 !important; /* Blue Done Button */
+  border-color: #0b5ed7 !important;
+}
+
+.space-row {
+  width: 100%;
+}
+.kb-space {
+  width: 50%;
+}
+
+@keyframes slideUpKey {
+  from { transform: translateY(100%); }
+  to { transform: translateY(0); }
+}
+
+/* ================================
+   FAQ MODAL (Red Header Style)
+================================ */
+.faq-modal-header-red {
+  /* 🔴 RED BACKGROUND EXACTLY LIKE SCREENSHOT */
+  background: #cf3a3a; 
+  padding: 15px 25px;
+  border-radius: 8px 8px 0 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+
+.faq-modal-header-red h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.faq-accordion-item {
+  border: 1px solid #e0e0e0;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.faq-accordion-btn {
+  width: 100%;
+  text-align: left;
+  background: #fff;
+  border: none;
+  padding: 15px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.faq-accordion-btn:hover {
+  background: #f9f9f9;
+}
+
+.faq-accordion-content {
+  padding: 15px;
+  font-size: 13px;
+  color: #555;
+  line-height: 1.5;
+  background: #fafafa;
+  border-top: 1px solid #eee;
+}
+
+/* ================================
+   INPUT FIELDS WITH ICONS
+================================ */
+.input-with-icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.input-with-icon .clean-input {
+  width: 100%;
+  padding: 12px 45px 12px 12px; /* Space for icon */
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.input-with-icon .clean-input:focus {
+  border-color: #0b5ed7;
+  box-shadow: 0 0 0 3px rgba(11, 94, 215, 0.1);
+}
+
+/* The clickable icon button inside input */
+.icon-trigger {
+  position: absolute;
+  right: 8px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+}
+
+.icon-trigger:hover {
+  background-color: #f0f0f0;
+}
+
+/* ================================
+   DARK VIRTUAL KEYBOARD (Bottom Sheet)
+================================ */
+.virtual-keyboard-overlay {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: transparent;
+  z-index: 20000;
+  display: flex;
+  justify-content: center;
+  animation: slideUpKey 0.3s ease-out;
+}
+
+.virtual-keyboard-box {
+  width: 100%;
+  background: #1e1e1e; /* Dark theme background */
+  padding: 15px;
+  border-top: 2px solid #333;
+  box-shadow: 0 -5px 20px rgba(0,0,0,0.5);
+}
+
+.kb-row {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  margin-bottom: 8px;
+}
+
+.kb-row button {
+  background: #3a3a3a;
+  color: white;
+  border: 1px solid #555;
+  border-radius: 6px;
+  padding: 12px 0;
+  width: 45px; /* Fixed width key */
+  font-size: 18px;
+  cursor: pointer;
+  font-family: sans-serif;
+  transition: background 0.1s;
+}
+
+.kb-row button:active {
+  background: #555;
+}
+
+.kb-action {
+  width: 70px !important;
+  font-weight: bold;
+  background: #555 !important;
+}
+
+.kb-done {
+  background: #0b5ed7 !important; /* Blue Done Button */
+  border-color: #0b5ed7 !important;
+}
+
+.kb-space {
+  width: 300px !important;
+  font-size: 14px !important;
+}
+
+@keyframes slideUpKey {
+  from { transform: translateY(100%); }
+  to { transform: translateY(0); }
+}
+
+/* ================================
+   FAQ MODAL (RED HEADER)
+================================ */
+.faq-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 99999;
+  backdrop-filter: blur(2px);
+}
+
+.faq-modal-content {
+  background: white;
+  width: 90%;
+  max-width: 700px;
+  max-height: 80vh;
+  border-radius: 8px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.4);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  animation: fadeIn 0.3s ease-out;
+}
+
+/* 🔴 Red Header */
+.faq-modal-header-red {
+  background: linear-gradient(135deg, #b22923, #e2535d); /* UIDAI Red */
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+
+.faq-modal-header-red h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.faq-modal-body {
+  padding: 20px;
+  overflow-y: auto;
+  background: #f9f9f9;
+}
+
+/* Accordion Styles */
+.faq-accordion-item {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+
+.faq-accordion-btn {
+  width: 100%;
+  text-align: left;
+  padding: 15px;
+  background: white;
+  border: none;
+  font-size: 15px;
+  font-weight: 600;
+  color: #333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.faq-accordion-btn:hover {
+  background: #f5f5f5;
+}
+
+.faq-accordion-content {
+  padding: 15px;
+  border-top: 1px solid #eee;
+  font-size: 14px;
+  color: #555;
+  line-height: 1.6;
+  background: #fafafa;
+}
+
+.close-modal-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* ================================
+   RADIO BUTTONS
+================================ */
+.radio-row {
+  display: flex;
+  gap: 20px;
+}
+
+.radio-label-simple {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 15px;
+  font-weight: 500;
+  color: #444;
+  cursor: pointer;
+}
+
+.radio-label-simple.active {
+  color: #000;
+  font-weight: 600;
+}
+
+/* ================================
+   YOUR ORIGINAL CSS (BASE)
+================================ */
+
+
+/* =================================================================
+   ⬇️ NEW STYLES FOR LOCK/UNLOCK PAGE (APPENDED AT BOTTOM) ⬇️
+================================================================= */
+
+/* 1. Yellow Header Card */
+.form-card-header {
+  background: linear-gradient(135deg, #f7b42c, #fc8717); /* Yellow/Orange */
+  padding: 15px 25px;
+  color: white;
+  text-align: left;
+}
+.header-title { font-size: 22px; margin: 0; font-weight: 600; }
+.form-card-body { padding: 30px; }
+
+/* 2. Form Inputs with Icons */
+.input-with-icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 25px;
+}
+.clean-input {
+  width: 100%;
+  padding: 12px 45px 12px 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+}
+.clean-input:focus { border-color: #0b5ed7; box-shadow: 0 0 0 2px rgba(11,94,215,0.1); }
+
+.icon-trigger {
+  position: absolute;
+  right: 5px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+}
+.icon-trigger:hover { background-color: #eee; border-radius: 4px; }
+
+/* 3. Dark Virtual Keyboard (Bottom) */
+.virtual-keyboard-overlay {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: transparent;
+  z-index: 20000;
+  display: flex;
+  justify-content: center;
+  animation: slideUpKey 0.3s ease-out;
+}
+.virtual-keyboard-box {
+  width: 100%;
+  background: #222; /* Dark Background */
+  padding: 10px;
+  border-top: 2px solid #444;
+  box-shadow: 0 -5px 20px rgba(0,0,0,0.5);
+}
+.kb-row { display: flex; justify-content: center; gap: 6px; margin-bottom: 6px; }
+.kb-row button {
+  background: #3a3a3a;
+  color: white;
+  border: 1px solid #555;
+  border-radius: 6px;
+  padding: 12px 0;
+  width: 45px;
+  font-size: 18px;
+  cursor: pointer;
+}
+.kb-row button:active { background: #555; }
+.kb-action { width: 60px !important; background: #555 !important; font-weight: bold; }
+.kb-done { background: #0b5ed7 !important; border-color: #0b5ed7 !important; }
+.kb-space { width: 300px !important; }
+@keyframes slideUpKey { from { transform: translateY(100%); } to { transform: translateY(0); } }
+
+/* 4. FAQ Modal with RED Header */
+.faq-modal-overlay {
+  position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+  background: rgba(0,0,0,0.6); z-index: 99999;
+  display: flex; justify-content: center; align-items: center;
+  backdrop-filter: blur(2px);
+}
+.faq-modal-content {
+  background: white; width: 90%; max-width: 750px; max-height: 80vh;
+  border-radius: 8px; overflow: hidden; display: flex; flex-direction: column;
+}
+.faq-modal-header-red {
+  background: #cf3a3a; /* RED */
+  padding: 15px 20px;
+  color: white;
+  display: flex; justify-content: space-between; align-items: center;
+}
+.faq-modal-header-red h3 { margin: 0; font-size: 18px; }
+.close-modal-btn { background: none; border: none; color: white; font-size: 24px; cursor: pointer; }
+
+/* 5. Radio Buttons */
+.radio-row { display: flex; gap: 20px; }
+.radio-label-simple { display: flex; align-items: center; gap: 8px; font-size: 15px; font-weight: 500; cursor: pointer; }
+.radio-text { color: #333; }
+
+/* 6. Help Button (?) */
+.help-btn {
+  width: 28px; height: 28px; border-radius: 50%;
+  background: #cf3a3a; /* Red to match FAQ header */
+  color: white; border: none; font-weight: bold; font-size: 16px;
+  cursor: pointer; display: flex; align-items: center; justify-content: center;
+}
+
+/* ================================
+   PAGE LAYOUT & CENTERING
+================================ */
+.lock-unlock-container-fixed {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  background-color: #f8f9fa;
+  z-index: 1000;
+}
+
+/* Back Button */
+.kiosk-back-circle-login {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #024898;
+  color: #fff;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+/* Main Card */
+.form-card-main {
+  width: 90%;
+  max-width: 850px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+  overflow: hidden;
+  position: relative;
+}
+
+/* Header */
+.form-card-header {
+  background: linear-gradient(135deg, #f7b42c, #fc8717);
+  padding: 20px 30px;
+  color: #fff;
+}
+.header-title { margin: 0; font-size: 24px; font-weight: 600; }
+
+.form-card-body { padding: 40px; }
+.form-blue-header { margin: 0; color: #008CBA; font-size: 18px; font-weight: 500; }
+
+/* Help (?) Button */
+.help-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #cf3a3a; /* Red */
+  color: white;
+  border: none;
+  font-weight: bold;
+  font-size: 18px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ================================
+   INPUTS & RADIO
+================================ */
+.radio-row-container {
+  display: flex;
+  gap: 30px;
+  margin: 30px 0;
+}
+.radio-label-simple {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+}
+.radio-label-simple.selected { color: #000; font-weight: bold; }
+
+/* Input with Icon inside */
+.input-group-icon {
+  position: relative;
+  width: 100%;
+  margin-bottom: 25px;
+}
+.clean-input {
+  width: 100%;
+  padding: 14px 50px 14px 15px; /* Space for icon */
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+  box-sizing: border-box;
+}
+.clean-input:focus { border-color: #0b5ed7; box-shadow: 0 0 0 3px rgba(11, 94, 215, 0.1); }
+
+/* The Icon Button */
+.icon-trigger {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+}
+
+/* ================================
+   CAPTCHA
+================================ */
+/* .captcha-row-simple { display: flex; gap: 20px; align-items: center; margin-bottom: 30px; }
+.captcha-box-display {
+  background: #f2f2f2;
+  border: 1px solid #ccc;
+  padding: 10px 20px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.captcha-text-code { font-family: monospace; font-size: 22px; font-weight: bold; letter-spacing: 3px; }
+.icon-btn-small { border: none; background: none; font-size: 20px; cursor: pointer; } */
+
+/* Button */
+.send-otp-btn-blue {
+  width: 100%;
+  background: #024898;
+  color: white;
+  padding: 14px;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/* ================================
+   FAQ MODAL (RED HEADER)
+================================ */
+.faq-modal-overlay {
+  position: fixed;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: rgba(0,0,0,0.6);
+  z-index: 9999 !important; /* Force on top */
+  display: flex; justify-content: center; align-items: center;
+  backdrop-filter: blur(4px);
+}
+.faq-modal-content {
+  background: white; width: 90%; max-width: 700px; max-height: 85vh;
+  border-radius: 8px; overflow: hidden; display: flex; flex-direction: column;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+}
+.faq-modal-header-red {
+  background: #cf3a3a !important; /* Force Red */
+  padding: 18px 25px;
+  color: white;
+  display: flex; justify-content: space-between; align-items: center;
+}
+.faq-modal-header-red h3 { margin: 0; font-size: 20px; font-weight: 500; }
+.close-modal-btn { background: none; border: none; color: white; font-size: 24px; cursor: pointer; }
+
+.faq-modal-body { padding: 20px; overflow-y: auto; background: #f9f9f9; }
+.faq-accordion-item { background: white; margin-bottom: 10px; border: 1px solid #ddd; border-radius: 4px; }
+.faq-accordion-btn {
+  width: 100%; padding: 15px; background: white; border: none;
+  text-align: left; font-size: 15px; font-weight: 600; color: #333;
+  display: flex; justify-content: space-between; cursor: pointer;
+}
+.faq-accordion-content { padding: 15px; background: #fafafa; border-top: 1px solid #eee; font-size: 14px; line-height: 1.5; color: #555; }
+
+/* =========================
+   CHROME OS KIOSK KEYBOARD
+========================= */
+.vk-chromeos {
+  position: fixed;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%, 100%);
+  width: 100%;
+  max-width: 1100px;
+  height: 32vh;
+  min-height: 360px;
+  background: #2b2f38;
+  padding: 22px 26px 28px;
+  border-radius: 18px 18px 0 0;
+  box-shadow: 0 -16px 45px rgba(0,0,0,.65);
+  transition: transform .35s ease;
+  z-index: 20000;
+}
+
+.vk-chromeos.show {
+  transform: translate(-50%, 0);
+}
+
+.vk-rows {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.vk-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+  margin-bottom: 14px;
+  padding: 0 10px;
+}
+
+.vk-row.row-1 { padding-left: 20px; padding-right: 10px; }
+.vk-row.row-2 { padding-left: 40px; padding-right: 10px; }
+
+/* KEY STYLES */
+.vk-chromeos button {
+  flex: 1;
+  height: 60px; /* Adjusted height */
+  border-radius: 12px;
+  border: none;
+  background: #0f1115;
+  color: #fff;
+  font-size: 22px;
+  font-weight: 500;
+  box-shadow: inset 0 -3px 0 rgba(255,255,255,.08), 0 6px 12px rgba(0,0,0,.4);
+  transition: all .12s ease;
+  cursor: pointer;
+}
+
+.vk-chromeos button:active {
+  transform: scale(.95);
+  background: #3b82f6;
+}
+
+/* SPECIAL KEYS */
+.wide { flex: 1.5; background: #3a4354; }
+.space { flex: 6; background: #101317; }
+.enter { flex: 2; background: #9bbcff; color: #000; font-weight: 600; }
+.clear { flex: 1.2; background: #ff5c5c; }
+.mode { flex: 1.2; }
+
+/* ================================
+   PAGE LAYOUT & CENTERING
+================================ */
+html, body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* Increased base font size for the page */
+    font-size: 16px; 
+}
+
+.lock-unlock-container-fixed {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  background-color: #f8f9fa;
+  z-index: 1000;
+}
+
+/* Back Button */
+.kiosk-back-circle-login {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  width: 54px; /* Slightly larger */
+  height: 54px;
+  border-radius: 50%;
+  background: #024898;
+  color: #fff;
+  border: none;
+  font-size: 26px;
+  cursor: pointer;
+  z-index: 1001;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Main Card */
+.form-card-main {
+  width: 90%;
+  max-width: 850px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+  overflow: hidden;
+  position: relative;
+}
+
+/* Header */
+.form-card-header {
+  background: linear-gradient(135deg, #f7b42c, #fc8717);
+  padding: 22px 35px;
+  color: #fff;
+}
+.header-title { margin: 0; font-size: 26px; font-weight: 600; }
+
+.form-card-body { padding: 40px 50px; }
+.form-blue-header { margin: 0; color: #008CBA; font-size: 20px; font-weight: 500; }
+
+/* Help (?) Button */
+.help-btn {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: #cf3a3a; /* Red */
+  color: white;
+  border: none;
+  font-weight: bold;
+  font-size: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ================================
+   INPUTS & RADIO (Larger Fonts)
+================================ */
+.radio-row-container {
+  display: flex;
+  gap: 35px;
+  margin: 35px 0;
+}
+.radio-label-simple {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 18px; /* Larger font */
+  font-weight: 500;
+  cursor: pointer;
+  color: #444;
+}
+.radio-label-simple input { transform: scale(1.2); } /* Larger radio button */
+.radio-label-simple.selected { color: #000; font-weight: 700; }
+
+/* Clean Input style */
+.clean-input {
+  width: 100%;
+  padding: 14px 16px;
+  font-size: 18px; /* Larger font */
+  border: 1.5px solid #ccc;
+  border-radius: 6px;
+  outline: none;
+  box-sizing: border-box;
+  transition: border-color 0.2s;
+}
+.clean-input:focus { border-color: #0b5ed7; box-shadow: 0 0 0 3px rgba(11, 94, 215, 0.1); }
+.mb-4 { margin-bottom: 25px; }
+
+/* ================================
+   CAPTCHA (Fixed Layout)
+================================ */
+
+.refresh-btn-fixed {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #555;
+    padding: 5px;
+    transition: transform 0.2s;
+}
+.refresh-btn-fixed:hover { transform: rotate(30deg); color: #000; }
+
+/* Button */
+.send-otp-btn-blue {
+  width: 100%;
+  background: #024898;
+  color: white;
+  padding: 16px;
+  font-size: 18px; /* Larger font */
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+}
+.send-otp-btn-blue:hover { background: #003366; }
+
+/* ================================
+   FAQ MODAL (RED HEADER)
+================================ */
+.faq-modal-overlay {
+  position: fixed;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: rgba(0,0,0,0.6);
+  z-index: 9999 !important;
+  display: flex; justify-content: center; align-items: center;
+  backdrop-filter: blur(4px);
+}
+.faq-modal-content {
+  background: white; width: 90%; max-width: 750px; max-height: 85vh;
+  border-radius: 10px; overflow: hidden; display: flex; flex-direction: column;
+  box-shadow: 0 25px 60px rgba(0,0,0,0.5);
+}
+.faq-modal-header-red {
+  background: #cf3a3a !important; /* Force Red */
+  padding: 20px 25px;
+  color: white;
+  display: flex; justify-content: space-between; align-items: center;
+}
+.faq-modal-header-red h3 { margin: 0; font-size: 22px; font-weight: 500; }
+.close-modal-btn { background: none; border: none; color: white; font-size: 26px; cursor: pointer; }
+
+.faq-modal-body { padding: 25px; overflow-y: auto; background: #f9f9f9; }
+.faq-accordion-item { background: white; margin-bottom: 12px; border: 1px solid #ddd; border-radius: 6px; }
+.faq-accordion-btn {
+  width: 100%; padding: 18px; background: white; border: none;
+  text-align: left; font-size: 16px; font-weight: 600; color: #333;
+  display: flex; justify-content: space-between; cursor: pointer;
+}
+.faq-accordion-content { padding: 18px; background: #fafafa; border-top: 1px solid #eee; font-size: 15px; line-height: 1.6; color: #555; }
+
+/* ================================
+   PAGE LAYOUT & CENTERING
+================================ */
+html, body { font-family: 'Segoe UI', sans-serif; font-size: 16px; }
+
+.lock-unlock-container-fixed {
+  position: fixed !important;
+  top: 0; left: 0; width: 100vw; height: 100vh;
+  display: flex !important; justify-content: center !important; align-items: center !important;
+  background-color: #f8f9fa; z-index: 1000;
+}
+
+/* Back Button */
+.kiosk-back-circle-login {
+  position: absolute; top: 30px; left: 30px;
+  width: 54px; height: 54px; border-radius: 50%;
+  background: #024898; color: #fff; border: none; font-size: 26px;
+  cursor: pointer; z-index: 1001; box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Main Card */
+.form-card-main {
+  width: 90%; max-width: 850px; background: #fff;
+  border-radius: 8px; box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+  overflow: hidden; position: relative;
+}
+
+/* Header */
+.form-card-header {
+  background: linear-gradient(135deg, #f7b42c, #fc8717);
+  padding: 22px 35px; color: #fff;
+}
+.header-title { margin: 0; font-size: 26px; font-weight: 600; }
+
+.form-card-body { padding: 40px 50px; }
+.form-blue-header { margin: 0; color: #008CBA; font-size: 20px; font-weight: 500; }
+
+/* Help (?) Button */
+.help-btn {
+  width: 34px; height: 34px; border-radius: 50%;
+  background: #cf3a3a; color: white; border: none; font-weight: bold; font-size: 20px;
+  cursor: pointer; display: flex; align-items: center; justify-content: center;
+}
+
+/* ================================
+   INPUTS & RADIO
+================================ */
+.radio-row-container { display: flex; gap: 35px; margin: 35px 0; }
+.radio-label-simple {
+  display: flex; align-items: center; gap: 12px;
+  font-size: 18px; font-weight: 500; cursor: pointer; color: #444;
+}
+.radio-label-simple input { transform: scale(1.2); }
+.radio-label-simple.selected { color: #000; font-weight: 700; }
+
+/* Clean Input style */
+.clean-input {
+  width: 100%; padding: 14px 16px; font-size: 18px;
+  border: 1.5px solid #ccc; border-radius: 6px; outline: none;
+  box-sizing: border-box; transition: border-color 0.2s;
+}
+.clean-input:focus { border-color: #0b5ed7; box-shadow: 0 0 0 3px rgba(11, 94, 215, 0.1); }
+.mb-4 { margin-bottom: 25px; }
+
+/* ================================
+   CAPTCHA
+================================ */
+
+
+/* Button */
+.send-otp-btn-blue {
+  width: 100%; background: #024898; color: white; padding: 16px;
+  font-size: 18px; border: none; border-radius: 6px; cursor: pointer; font-weight: 600;
+}
+.send-otp-btn-blue:hover { background: #003366; }
+
+/* ================================
+   FAQ MODAL
+================================ */
+.faq-modal-overlay {
+  position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+  background: rgba(0,0,0,0.6); z-index: 9999 !important;
+  display: flex; justify-content: center; align-items: center; backdrop-filter: blur(4px);
+}
+.faq-modal-content {
+  background: white; width: 90%; max-width: 750px; max-height: 85vh;
+  border-radius: 10px; overflow: hidden; display: flex; flex-direction: column;
+  box-shadow: 0 25px 60px rgba(0,0,0,0.5);
+}
+.faq-modal-header-red {
+  background: #cf3a3a !important; padding: 20px 25px; color: white;
+  display: flex; justify-content: space-between; align-items: center;
+}
+.faq-modal-header-red h3 { margin: 0; font-size: 22px; font-weight: 500; }
+.close-modal-btn { background: none; border: none; color: white; font-size: 26px; cursor: pointer; }
+.faq-modal-body { padding: 25px; overflow-y: auto; background: #f9f9f9; }
+.faq-accordion-item { background: white; margin-bottom: 12px; border: 1px solid #ddd; border-radius: 6px; }
+.faq-accordion-btn {
+  width: 100%; padding: 18px; background: white; border: none;
+  text-align: left; font-size: 16px; font-weight: 600; color: #333;
+  display: flex; justify-content: space-between; cursor: pointer;
+}
+.faq-accordion-content { padding: 18px; background: #fafafa; border-top: 1px solid #eee; font-size: 15px; line-height: 1.6; color: #555; }
+
+/* =========================
+   CHROME OS KIOSK KEYBOARD
+========================= */
+.vk-chromeos {
+  position: fixed; left: 50%; bottom: 0; transform: translate(-50%, 100%);
+  width: 100%; max-width: 1100px; height: 32vh; min-height: 360px;
+  background: #2b2f38; padding: 22px 26px 28px; border-radius: 18px 18px 0 0;
+  box-shadow: 0 -16px 45px rgba(0,0,0,.65); transition: transform .35s ease;
+  z-index: 20000;
+}
+.vk-chromeos.show { transform: translate(-50%, 0); }
+
+.vk-row { display: flex; justify-content: space-between; gap: 14px; margin-bottom: 14px; padding: 0 10px; }
+.vk-row.row-1 { padding-left: 20px; padding-right: 10px; }
+.vk-row.row-2 { padding-left: 40px; padding-right: 10px; }
+
+.vk-chromeos button {
+  flex: 1; height: 72px; border-radius: 16px; border: none;
+  background: #0f1115; color: #fff; font-size: 22px; font-weight: 500;
+  box-shadow: inset 0 -3px 0 rgba(255,255,255,.08), 0 6px 12px rgba(0,0,0,.4);
+  transition: all .12s ease; cursor: pointer;
+}
+.vk-chromeos button:active { transform: scale(.95); background: #3b82f6; }
+
+.wide { flex: 1.5; background: #3a4354; }
+.space { flex: 6; height: 78px; border-radius: 18px; background: #101317; }
+.enter { flex: 2; background: #9bbcff; color: #000; font-weight: 600; }
+.clear { flex: 1.2; background: #ff5c5c; }
+.mode { flex: 1.2; }
+
+/* ================================
+   PAGE LAYOUT & CENTERING
+================================ */
+html, body { font-family: 'Segoe UI', sans-serif; font-size: 16px; }
+
+.lock-unlock-container-fixed {
+  position: fixed !important; top: 0; left: 0; width: 100vw; height: 100vh;
+  display: flex !important; justify-content: center !important; align-items: center !important;
+  background-color: #f8f9fa; z-index: 1000;
+}
+
+/* Back Button */
+.kiosk-back-circle-login {
+  position: absolute; top: 30px; left: 30px;
+  width: 54px; height: 54px; border-radius: 50%;
+  background: #024898; color: #fff; border: none; font-size: 26px;
+  cursor: pointer; z-index: 1001; box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Main Card */
+.form-card-main {
+  width: 90%; max-width: 850px; background: #fff;
+  border-radius: 8px; box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+  overflow: hidden; position: relative;
+}
+
+/* Header */
+.form-card-header {
+  background: linear-gradient(135deg, #f7b42c, #fc8717);
+  padding: 22px 35px; color: #fff;
+}
+.header-title { margin: 0; font-size: 26px; font-weight: 600; }
+
+.form-card-body { padding: 40px 50px; }
+
+/* 🔹 TITLE ROW FIX (Flexbox) */
+.form-title-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 25px;
+}
+.form-blue-header { margin: 0; color: #008CBA; font-size: 20px; font-weight: 500; }
+
+/* 🔹 HELP BUTTON (The Red ?) */
+.help-btn {
+  width: 32px; height: 32px; border-radius: 50%;
+  background: #cf3a3a; color: white; border: none; font-weight: bold; font-size: 18px;
+  cursor: pointer; display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0; /* Prevents it from shrinking */
+}
+
+/* ================================
+   INPUTS & RADIO
+================================ */
+.radio-row-container { display: flex; gap: 35px; margin: 35px 0; }
+.radio-label-simple {
+  display: flex; align-items: center; gap: 12px;
+  font-size: 18px; font-weight: 500; cursor: pointer; color: #444;
+}
+.radio-label-simple input { transform: scale(1.2); }
+.radio-label-simple.selected { color: #000; font-weight: 700; }
+
+/* Clean Input style */
+.clean-input {
+  width: 100%; padding: 14px 16px; font-size: 18px;
+  border: 1.5px solid #ccc; border-radius: 6px; outline: none;
+  box-sizing: border-box; transition: border-color 0.2s;
+}
+.clean-input:focus { border-color: #0b5ed7; box-shadow: 0 0 0 3px rgba(11, 94, 215, 0.1); }
+.mb-4 { margin-bottom: 25px; }
+
+/* ================================
+   CAPTCHA
+================================ */
+
+.refresh-btn-fixed { background: none; border: none; font-size: 24px; cursor: pointer; color: #555; padding: 5px; }
+
+/* Button */
+.send-otp-btn-blue {
+  width: 100%; background: #024898; color: white; padding: 16px;
+  font-size: 18px; border: none; border-radius: 6px; cursor: pointer; font-weight: 600;
+}
+.send-otp-btn-blue:hover { background: #003366; }
+
+/* ================================
+   FAQ MODAL
+================================ */
+.faq-modal-overlay {
+  position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+  background: rgba(0,0,0,0.6); z-index: 9999 !important;
+  display: flex; justify-content: center; align-items: center; backdrop-filter: blur(4px);
+}
+.faq-modal-content {
+  background: white; width: 90%; max-width: 750px; max-height: 85vh;
+  border-radius: 10px; overflow: hidden; display: flex; flex-direction: column;
+  box-shadow: 0 25px 60px rgba(0,0,0,0.5);
+}
+.faq-modal-header-red {
+  background: #cf3a3a !important; padding: 20px 25px; color: white;
+  display: flex; justify-content: space-between; align-items: center;
+}
+.faq-modal-header-red h3 { margin: 0; font-size: 22px; font-weight: 500; }
+.close-modal-btn { background: none; border: none; color: white; font-size: 26px; cursor: pointer; }
+.faq-modal-body { padding: 25px; overflow-y: auto; background: #f9f9f9; }
+.faq-accordion-item { background: white; margin-bottom: 12px; border: 1px solid #ddd; border-radius: 6px; }
+.faq-accordion-btn {
+  width: 100%; padding: 18px; background: white; border: none;
+  text-align: left; font-size: 16px; font-weight: 600; color: #333;
+  display: flex; justify-content: space-between; cursor: pointer;
+}
+.faq-accordion-content { padding: 18px; background: #fafafa; border-top: 1px solid #eee; font-size: 15px; line-height: 1.6; color: #555; }
+
+/* =========================
+   CHROME OS KIOSK KEYBOARD
+========================= */
+.vk-chromeos {
+  position: fixed; left: 50%; bottom: 0; transform: translate(-50%, 100%);
+  width: 100%; max-width: 1100px; height: 32vh; min-height: 360px;
+  background: #2b2f38; padding: 22px 26px 28px; border-radius: 18px 18px 0 0;
+  box-shadow: 0 -16px 45px rgba(0,0,0,.65); transition: transform .35s ease;
+  z-index: 20000;
+}
+.vk-chromeos.show { transform: translate(-50%, 0); }
+
+.vk-row { display: flex; justify-content: space-between; gap: 14px; margin-bottom: 14px; padding: 0 10px; }
+.vk-row.row-1 { padding-left: 20px; padding-right: 10px; }
+.vk-row.row-2 { padding-left: 40px; padding-right: 10px; }
+
+.vk-chromeos button {
+  flex: 1; height: 72px; border-radius: 16px; border: none;
+  background: #0f1115; color: #fff; font-size: 22px; font-weight: 500;
+  box-shadow: inset 0 -3px 0 rgba(255,255,255,.08), 0 6px 12px rgba(0,0,0,.4);
+  transition: all .12s ease; cursor: pointer;
+}
+.vk-chromeos button:active { transform: scale(.95); background: #3b82f6; }
+
+.wide { flex: 1.5; background: #3a4354; }
+.space { flex: 6; height: 78px; border-radius: 18px; background: #101317; }
+.enter { flex: 2; background: #9bbcff; color: #000; font-weight: 600; }
+.clear { flex: 1.2; background: #ff5c5c; }
+.mode { flex: 1.2; }
+
+/* ================================
+   PAGE LAYOUT & CENTERING
+================================ */
+html, body { font-family: 'Segoe UI', sans-serif; font-size: 16px; margin: 0; padding: 0; }
+
+.lock-unlock-container-fixed {
+  position: fixed !important; top: 0; left: 0; width: 100vw; height: 100vh;
+  display: flex !important; justify-content: center !important; align-items: center !important;
+  background-color: #f8f9fa; z-index: 1000;
+}
+
+/* Back Button */
+.kiosk-back-circle-login {
+  position: fixed; top: 30px; left: 30px;
+  width: 54px; height: 54px; border-radius: 50%;
+  background: #024898; color: #fff; border: none; font-size: 26px;
+  cursor: pointer; z-index: 1001; box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Main Card */
+.form-card-main {
+  width: 90%; max-width: 850px; background: #fff;
+  border-radius: 8px; box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+  overflow: hidden; position: relative;
+}
+
+/* Header */
+.form-card-header {
+  background: linear-gradient(135deg, #f7b42c, #fc8717); /* Orange */
+  padding: 22px 35px; color: #fff;
+}
+.header-title { margin: 0; font-size: 26px; font-weight: 600; }
+
+.form-card-body { padding: 40px 50px; }
+
+/* 🔹 TITLE ROW */
+.d-flex { display: flex; }
+.justify-content-between { justify-content: space-between; }
+.align-items-center { align-items: center; }
+.mb-4 { margin-bottom: 25px; }
+
+.form-blue-header { margin: 0; color: #008CBA; font-size: 18px; font-weight: 500; }
+
+/* 🔹 HELP BUTTON STYLES (FROM YOUR REFERENCE) */
+.help-btn {
+  border: none !important; outline: none !important; background: transparent !important; padding: 0; cursor: pointer;
+}
+.help-icon {
+  width: 38px; height: 38px; border-radius: 50%;
+  /* 🔴 Red Gradient for Help Button */
+  background: linear-gradient(135deg, #b22923, #e2535d);
+  color: #ffffff; font-size: 18px; font-weight: 700;
+  display: inline-flex; align-items: center; justify-content: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.25);
+  transition: transform 0.1s;
+}
+.help-icon:active { transform: scale(0.92); }
+
+/* ================================
+   INPUTS & RADIO
+================================ */
+.radio-row-container { display: flex; gap: 35px; margin: 35px 0; }
+.radio-label-simple {
+  display: flex; align-items: center; gap: 12px;
+  font-size: 18px; font-weight: 500; cursor: pointer; color: #444;
+}
+.radio-label-simple input { transform: scale(1.2); }
+.radio-label-simple.selected { color: #000; font-weight: 700; }
+
+/* Input Group with Icon */
+.input-group-icon {
+  position: relative; width: 100%; margin-bottom: 25px;
+}
+.clean-input {
+  width: 100%; padding: 14px 50px 14px 16px; 
+  font-size: 18px; border: 1.5px solid #ccc; border-radius: 6px; outline: none;
+  box-sizing: border-box; transition: border-color 0.2s;
+}
+.clean-input:focus { border-color: #0b5ed7; box-shadow: 0 0 0 3px rgba(11, 94, 215, 0.1); }
+
+/* Keypad Icon Trigger */
+.icon-trigger {
+  position: absolute; right: 10px; top: 50%; transform: translateY(-50%);
+  background: none; border: none; cursor: pointer; padding: 5px;
+  display: flex; align-items: center;
+}
+.icon-trigger:hover svg { stroke: #0b5ed7; }
+
+/* ================================
+   CAPTCHA
+================================ */
+
+.refresh-btn-fixed { background: none; border: none; font-size: 24px; cursor: pointer; color: #555; padding: 5px; }
+
+/* Button */
+.send-otp-btn-blue {
+  width: 100%; background: #024898; color: white; padding: 16px;
+  font-size: 18px; border: none; border-radius: 6px; cursor: pointer; font-weight: 600;
+  margin-top: 10px;
+}
+.send-otp-btn-blue:hover { background: #003366; }
+
+/* ================================
+   FAQ MODAL (FROM YOUR REFERENCE)
+================================ */
+.faq-modal-backdrop {
+  position: fixed; inset: 0; background: rgba(0, 0, 0, 0.65);
+  z-index: 20000; display: flex; align-items: center; justify-content: center;
+  backdrop-filter: blur(2px);
+}
+.faq-modal {
+  background: #ffffff; width: 90%; max-width: 900px; max-height: 80vh;
+  border-radius: 14px; box-shadow: 0 20px 50px rgba(0,0,0,.4);
+  display: flex; flex-direction: column; animation: fadeIn 0.25s ease-out;
+}
+.faq-modal-header {
+  padding: 16px 20px;
+  /* 🔴 Red Gradient Header */
+  background: linear-gradient(135deg, #b22923, #e2535d);
+  color: #fff; border-radius: 14px 14px 0 0;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.faq-modal-header h5 { margin: 0; font-size: 20px; font-weight: 600; }
+.close-btn { background: transparent; border: none; color: #fff; font-size: 24px; cursor: pointer; }
+.faq-modal-body { padding: 30px; overflow-y: auto; }
+
+@keyframes fadeIn { from { opacity: 0; transform: scale(0.95); } to { opacity: 1; transform: scale(1); } }
+
+/* =========================
+   CHROME OS KIOSK KEYBOARD
+========================= */
+.vk-chromeos {
+  position: fixed; left: 50%; bottom: 0; transform: translate(-50%, 100%);
+  width: 100%; max-width: 1100px; height: 32vh; min-height: 360px;
+  background: #2b2f38; padding: 22px 26px 28px; border-radius: 18px 18px 0 0;
+  box-shadow: 0 -16px 45px rgba(0,0,0,.65); transition: transform .35s ease;
+  z-index: 20000;
+}
+.vk-chromeos.show { transform: translate(-50%, 0); }
+
+.vk-row { display: flex; justify-content: space-between; gap: 14px; margin-bottom: 14px; padding: 0 10px; }
+.vk-row.row-1 { padding-left: 20px; padding-right: 10px; }
+.vk-row.row-2 { padding-left: 40px; padding-right: 10px; }
+
+.vk-chromeos button {
+  flex: 1; height: 72px; border-radius: 16px; border: none;
+  background: #0f1115; color: #fff; font-size: 22px; font-weight: 500;
+  box-shadow: inset 0 -3px 0 rgba(255,255,255,.08), 0 6px 12px rgba(0,0,0,.4);
+  transition: all .12s ease; cursor: pointer;
+}
+.vk-chromeos button:active { transform: scale(.95); background: #3b82f6; }
+
+.wide { flex: 1.5; background: #3a4354; }
+.space { flex: 6; height: 78px; border-radius: 18px; background: #101317; }
+.enter { flex: 2; background: #9bbcff; color: #000; font-weight: 600; }
+.clear { flex: 1.2; background: #ff5c5c; }
+.mode { flex: 1.2; }
+
+/* ================================
+   PAGE LAYOUT & CENTERING
+================================ */
+html, body { font-family: 'Segoe UI', sans-serif; font-size: 16px; margin: 0; padding: 0; }
+
+.lock-unlock-container-fixed {
+  position: fixed !important; top: 0; left: 0; width: 100vw; height: 100vh;
+  display: flex !important; justify-content: center !important; align-items: center !important;
+  background-color: #f8f9fa; z-index: 1000;
+}
+
+/* Back Button */
+.kiosk-back-circle-login {
+  position: fixed; top: 30px; left: 30px;
+  width: 54px; height: 54px; border-radius: 50%;
+  background: #024898; color: #fff; border: none; font-size: 26px;
+  cursor: pointer; z-index: 1001; box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Main Card */
+.form-card-main {
+  width: 90%; max-width: 850px; background: #fff;
+  border-radius: 8px; box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+  overflow: hidden; position: relative;
+}
+
+/* Header */
+.form-card-header {
+  background: linear-gradient(135deg, #f7b42c, #fc8717); /* Orange */
+  padding: 22px 35px; color: #fff;
+}
+.header-title { margin: 0; font-size: 26px; font-weight: 600; }
+
+.form-card-body { padding: 40px 50px; }
+
+/* 🔹 TITLE ROW */
+.d-flex { display: flex; }
+.justify-content-between { justify-content: space-between; }
+.align-items-center { align-items: center; }
+.mb-4 { margin-bottom: 25px; }
+
+.form-blue-header { margin: 0; color: #008CBA; font-size: 18px; font-weight: 500; }
+
+/* 🔹 HELP BUTTON STYLES */
+.help-btn {
+  border: none !important; outline: none !important; background: transparent !important; padding: 0; cursor: pointer;
+}
+.help-icon {
+  width: 38px; height: 38px; border-radius: 50%;
+  /* 🔴 Red Gradient for Help Button */
+  background: linear-gradient(135deg, #b22923, #e2535d);
+  color: #ffffff; font-size: 18px; font-weight: 700;
+  display: inline-flex; align-items: center; justify-content: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.25);
+  transition: transform 0.1s;
+}
+.help-icon:active { transform: scale(0.92); }
+
+/* ================================
+   INPUTS & RADIO
+================================ */
+.radio-row-container { display: flex; gap: 35px; margin: 35px 0; }
+.radio-label-simple {
+  display: flex; align-items: center; gap: 12px;
+  font-size: 18px; font-weight: 500; cursor: pointer; color: #444;
+}
+.radio-label-simple input { transform: scale(1.2); }
+.radio-label-simple.selected { color: #000; font-weight: 700; }
+
+/* Input Group (No Icon) */
+.input-group-icon {
+  position: relative; width: 100%; margin-bottom: 25px;
+}
+.clean-input {
+  width: 100%; padding: 14px 16px; /* Standard padding */
+  font-size: 18px; border: 1.5px solid #ccc; border-radius: 6px; outline: none;
+  box-sizing: border-box; transition: border-color 0.2s;
+}
+.clean-input:focus { border-color: #0b5ed7; box-shadow: 0 0 0 3px rgba(11, 94, 215, 0.1); }
+
+/* ================================
+   CAPTCHA
+================================ */
+.captcha-row-fixed { display: flex; gap: 20px; align-items: center; margin-bottom: 25px; }
+.captcha-box-fixed {
+    flex: 0 0 auto; display: flex; align-items: center;
+    background: #f2f2f2; border: 1.5px solid #ccc; border-radius: 6px;
+    padding: 0 15px; min-width: 160px; height: 53px; 
+    justify-content: space-between;
+}
+.captcha-text-fixed { font-family: 'Courier New', monospace; font-size: 24px; font-weight: bold; letter-spacing: 4px; color: #333; }
+.refresh-btn-fixed { background: none; border: none; font-size: 24px; cursor: pointer; color: #555; padding: 5px; }
+
+/* Button */
+.send-otp-btn-blue {
+  width: 100%; background: #024898; color: white; padding: 16px;
+  font-size: 18px; border: none; border-radius: 6px; cursor: pointer; font-weight: 600;
+  margin-top: 10px;
+}
+.send-otp-btn-blue:hover { background: #003366; }
+
+/* ================================
+   FAQ MODAL
+================================ */
+.faq-modal-backdrop {
+  position: fixed; inset: 0; background: rgba(0, 0, 0, 0.65);
+  z-index: 20000; display: flex; align-items: center; justify-content: center;
+  backdrop-filter: blur(2px);
+}
+.faq-modal {
+  background: #ffffff; width: 90%; max-width: 900px; max-height: 80vh;
+  border-radius: 14px; box-shadow: 0 20px 50px rgba(0,0,0,.4);
+  display: flex; flex-direction: column; animation: fadeIn 0.25s ease-out;
+}
+.faq-modal-header {
+  padding: 16px 20px;
+  /* 🔴 Red Gradient Header */
+  background: linear-gradient(135deg, #b22923, #e2535d);
+  color: #fff; border-radius: 14px 14px 0 0;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.faq-modal-header h5 { margin: 0; font-size: 20px; font-weight: 600; }
+.close-btn { background: transparent; border: none; color: #fff; font-size: 24px; cursor: pointer; }
+.faq-modal-body { padding: 30px; overflow-y: auto; }
+
+@keyframes fadeIn { from { opacity: 0; transform: scale(0.95); } to { opacity: 1; transform: scale(1); } }
+
+/* =========================
+   CHROME OS KIOSK KEYBOARD
+========================= */
+.vk-chromeos {
+  position: fixed; left: 50%; bottom: 0; transform: translate(-50%, 100%);
+  width: 100%; max-width: 1100px; height: 32vh; min-height: 360px;
+  background: #2b2f38; padding: 22px 26px 28px; border-radius: 18px 18px 0 0;
+  box-shadow: 0 -16px 45px rgba(0,0,0,.65); transition: transform .35s ease;
+  z-index: 20000;
+}
+.vk-chromeos.show { transform: translate(-50%, 0); }
+
+.vk-row { display: flex; justify-content: space-between; gap: 14px; margin-bottom: 14px; padding: 0 10px; }
+.vk-row.row-1 { padding-left: 20px; padding-right: 10px; }
+.vk-row.row-2 { padding-left: 40px; padding-right: 10px; }
+
+.vk-chromeos button {
+  flex: 1; height: 72px; border-radius: 16px; border: none;
+  background: #0f1115; color: #fff; font-size: 22px; font-weight: 500;
+  box-shadow: inset 0 -3px 0 rgba(255,255,255,.08), 0 6px 12px rgba(0,0,0,.4);
+  transition: all .12s ease; cursor: pointer;
+}
+.vk-chromeos button:active { transform: scale(.95); background: #3b82f6; }
+
+.wide { flex: 1.5; background: #3a4354; }
+.space { flex: 6; height: 78px; border-radius: 18px; background: #101317; }
+.enter { flex: 2; background: #9bbcff; color: #000; font-weight: 600; }
+.clear { flex: 1.2; background: #ff5c5c; }
+.mode { flex: 1.2; }
+
+/* ================================
+   PAGE LAYOUT & CENTERING
+================================ */
+html, body { font-family: 'Segoe UI', sans-serif; font-size: 16px; margin: 0; padding: 0; }
+
+.lock-unlock-container-fixed {
+  position: fixed !important; top: 0; left: 0; width: 100vw; height: 100vh;
+  display: flex !important; justify-content: center !important; align-items: center !important;
+  background-color: #ffffff; z-index: 1000;
+}
+
+/* Back Button */
+.kiosk-back-circle-login {
+  position: fixed; top: 30px; left: 30px;
+  width: 54px; height: 54px; border-radius: 50%;
+  background: #024898; color: #fff; border: none; font-size: 26px;
+  cursor: pointer; z-index: 1001; box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Main Card */
+.form-card-main {
+  width: 90%; max-width: 850px; background: #fff;
+  border-radius: 8px; box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+  overflow: hidden; position: relative;
+}
+
+/* Header */
+.form-card-header {
+  background: linear-gradient(135deg, #f7b42c, #fc8717); /* Orange for Main Form */
+  padding: 22px 35px; color: #fff;
+}
+.header-title { margin: 0; font-size: 26px; font-weight: 600; }
+
+.form-card-body { padding: 40px 50px; }
+
+/* 🔹 TITLE ROW */
+.form-title-row {
+    display: flex; justify-content: space-between; align-items: center;
+    width: 100%; margin-bottom: 25px;
+}
+.form-blue-header { margin: 0; color: #008CBA; font-size: 20px; font-weight: 500; }
+
+/* 🔹 HELP BUTTON STYLES */
+.help-btn {
+  border: none !important; outline: none !important; background: transparent !important; padding: 0; cursor: pointer;
+}
+.help-icon {
+  width: 32px; height: 32px; border-radius: 50%;
+  background: linear-gradient(135deg, #b22923, #e2535d); /* Red */
+  color: #ffffff; font-size: 18px; font-weight: 700;
+  display: inline-flex; align-items: center; justify-content: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.25);
+  transition: transform 0.1s;
+}
+.help-icon:active { transform: scale(0.92); }
+
+/* ================================
+   INPUTS & RADIO
+================================ */
+.radio-row-container { display: flex; gap: 35px; margin: 35px 0; flex-wrap: wrap; }
+.radio-label-simple {
+  display: flex; align-items: center; gap: 8px;
+  font-size: 16px; font-weight: 500; cursor: pointer; color: #444;
+}
+.radio-label-simple input { transform: scale(1.2); }
+.radio-label-simple.selected { color: #000; font-weight: 700; }
+
+.input-group-icon { position: relative; width: 100%; margin-bottom: 25px; }
+.clean-input {
+  width: 100%; padding: 14px 16px; 
+  font-size: 18px; border: 1.5px solid #ccc; border-radius: 4px; outline: none;
+  box-sizing: border-box; transition: border-color 0.2s;
+}
+.clean-input:focus { border-color: #0b5ed7; box-shadow: 0 0 0 3px rgba(11, 94, 215, 0.1); }
+
+/* ================================
+   CAPTCHA
+================================ */
+.captcha-row-fixed { display: flex; gap: 20px; align-items: center; margin-bottom: 25px; }
+.captcha-box-fixed {
+    flex: 0 0 auto; display: flex; align-items: center;
+    background: #f2f2f2; border: 1.5px solid #ccc; border-radius: 6px;
+    padding: 0 15px; min-width: 160px; height: 53px; 
+    justify-content: space-between;
+}
+.captcha-text-fixed { font-family: 'Courier New', monospace; font-size: 24px; font-weight: bold; letter-spacing: 4px; color: #333; }
+.refresh-btn-fixed { background: none; border: none; font-size: 24px; cursor: pointer; color: #555; padding: 5px; }
+
+/* Button */
+.send-otp-btn-blue {
+  width: 100%; background: #024898; color: white; padding: 16px;
+  font-size: 18px; border: none; border-radius: 6px; cursor: pointer; font-weight: 600;
+  margin-top: 10px;
+}
+.send-otp-btn-blue:hover { background: #003366; }
+
+/* =======================================================
+   FAQ MODAL STYLES (SOLID BACKGROUND FIX)
+======================================================= */
+.faq-modal-backdrop {
+  position: fixed; inset: 0; background: rgba(0, 0, 0, 0.65);
+  z-index: 20000; display: flex; align-items: center; justify-content: center;
+  backdrop-filter: blur(2px);
+}
+
+.faq-modal {
+  /* 🔴 FORCE SOLID WHITE BACKGROUND */
+  background-color: #ffffff !important; 
+  width: 90%; max-width: 800px; max-height: 85vh;
+  border-radius: 12px; 
+  overflow: hidden; 
+  display: flex; flex-direction: column; 
+  animation: fadeIn 0.25s ease-out;
+  box-shadow: 0 25px 50px rgba(0,0,0,0.5);
+}
+
+.faq-modal-header.red-header {
+  background: #cf3a3a; /* Red Header */
+  padding: 18px 25px;
+  color: #fff;
+  display: flex; align-items: center; justify-content: space-between;
+}
+
+.faq-modal-header h5 { margin: 0; font-size: 20px; font-weight: 500; }
+.close-btn { background: transparent; border: none; color: #fff; font-size: 24px; cursor: pointer; }
+
+/* 🔹 SOLID BODY BACKGROUND */
+.faq-modal-body {
+  padding: 25px;
+  background-color: #f3f4f6 !important; /* Light Grey Solid */
+  overflow-y: auto;
+}
+
+.faq-wrapper { max-width: 100%; margin: 0 auto; }
+
+/* FAQ CARD */
+.faq-box {
+  background: #ffffff;
+  border-radius: 14px;
+  margin-bottom: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  border: 1px solid #e4e8f0;
+}
+
+.faq-box:hover { transform: translateY(-2px); box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1); }
+.faq-box.active { border-color: #d32f2f; }
+
+/* QUESTION ROW */
+.faq-question-row {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 16px 20px; cursor: pointer; position: relative;
+  background: white;
+}
+
+/* Red Indicator Line */
+.faq-question-row::before {
+  content: ""; position: absolute; left: 0; top: 0; width: 4px; height: 100%;
+  background: #d32f2f; opacity: 0; transition: opacity 0.3s ease;
+}
+.faq-box:hover .faq-question-row::before,
+.faq-box.active .faq-question-row::before { opacity: 1; }
+
+.faq-question-text { font-size: 15px; font-weight: 600; color: #1c1c1c; }
+
+/* CHEVRON */
+.faq-chevron {
+  display: flex; align-items: center;
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  color: #666;
+}
+.faq-chevron.rotate { transform: rotate(180deg) scale(1.1); color: #d32f2f; }
+.faq-chevron-svg { width: 18px; height: 18px; }
+
+/* ANSWER */
+.faq-answer {
+  padding: 16px 20px; font-size: 14px; color: #333;
+  background-color: #fafafa;
+  border-top: 1px solid #eee; line-height: 1.6;
+}
+
+@keyframes fadeIn { from { opacity: 0; transform: scale(0.95); } to { opacity: 1; transform: scale(1); } }
+
+/* =========================
+   CHROME OS KEYBOARD
+========================= */
+.vk-chromeos {
+  position: fixed; left: 50%; bottom: 0; transform: translate(-50%, 100%);
+  width: 100%; max-width: 1100px; height: 32vh; min-height: 360px;
+  background: #2b2f38; padding: 22px 26px 28px; border-radius: 18px 18px 0 0;
+  box-shadow: 0 -16px 45px rgba(0,0,0,.65); transition: transform .35s ease;
+  z-index: 20000;
+}
+.vk-chromeos.show { transform: translate(-50%, 0); }
+.vk-row { display: flex; justify-content: space-between; gap: 14px; margin-bottom: 14px; padding: 0 10px; }
+.vk-row.row-1 { padding-left: 20px; padding-right: 10px; }
+.vk-row.row-2 { padding-left: 40px; padding-right: 10px; }
+.vk-chromeos button {
+  flex: 1; height: 72px; border-radius: 16px; border: none;
+  background: #0f1115; color: #fff; font-size: 22px; font-weight: 500;
+  box-shadow: inset 0 -3px 0 rgba(255,255,255,.08), 0 6px 12px rgba(0,0,0,.4);
+  transition: all .12s ease; cursor: pointer;
+}
+.vk-chromeos button:active { transform: scale(.95); background: #3b82f6; }
+.wide { flex: 1.5; background: #3a4354; }
+.space { flex: 6; height: 78px; border-radius: 18px; background: #101317; }
+.enter { flex: 2; background: #9bbcff; color: #000; font-weight: 600; }
+.clear { flex: 1.2; background: #ff5c5c; }
+.mode { flex: 1.2; }
+
+
+/* =========================================================
+   🔴 GLOBAL WATERMARK REMOVER 🔴
+   This hides the .global-watermark image specifically when 
+   the FAQ modal is open on the screen.
+   ========================================================= */
+
+/* 1. Hide the watermark image if the FAQ modal exists on the page */
+body:has(.faq-modal-backdrop) .global-watermark,
+.app-layout:has(.faq-modal-backdrop) .global-watermark {
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    z-index: -1 !important;
+}
+
+/* 2. Force Modal Background to be Solid White (Double Safety) */
+.faq-modal {
+    background-color: #ffffff !important;
+    background-image: none !important;
+    z-index: 20005 !important; /* Ensure it sits above everything */
+}
+
+/* 3. Force Body Background to be Solid Grey */
+.faq-modal-body {
+    background-color: #f8f9fa !important;
+    background-image: none !important;
+}
+
+/* ================================
+   BACK BUTTON (UPDATED COLOR)
+================================ */
+.kiosk-back-circle-login {
+  position: absolute; /* or fixed, depending on your layout preference */
+  top: 30px;
+  left: 30px;
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  
+  /* 🟡 CHANGED FROM BLUE TO ORANGE GRADIENT */
+  background: linear-gradient(135deg, #f7b42c, #fc8717);
+  
+  color: #fff;
+  border: none;
+  font-size: 26px;
+  cursor: pointer;
+  z-index: 1001;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease;
+}
+
+.kiosk-back-circle-login:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}

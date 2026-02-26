@@ -1,0 +1,544 @@
+/* ================================
+   TEXT & RADIO
+================================ */
+html, body {
+  height: 100%;
+  margin: 0;
+  /* background-color: #e0e0e1; */
+}
+
+.selectAadhar {
+  font-size: 1.05rem;
+  padding: 10px 0 20px;
+}
+
+.radioBtn {
+  display: inline-flex;
+  align-items: center;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-right: 16px;
+}
+
+.radioBtn input {
+  margin-right: 8px;
+}
+
+html[lang="hi"] .simple-input,
+html[lang="hi"] .labelText {
+  font-size: 18px;
+}
+.uidai-header {
+  background: linear-gradient(to right, #b71c1c, #d84343);
+  padding: 15px 20px;
+  border-radius: 8px 8px 0 0;
+}
+
+.header-back-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+}
+
+/* ================================
+   CAPTCHA ROW (6 + 6)
+================================ */
+.captcha-row {
+  margin-top: 16px;
+  display: flex;
+  gap: 16px;
+  align-items: center; /* fixes baseline cut issue */
+}
+
+/* LEFT: CAPTCHA INPUT */
+.captcha-field {
+  flex: 1;
+  margin-bottom: 0 !important; /* full line */
+}
+
+.captcha-field .floating-input {
+  padding-bottom: 6px; /* ensure underline at bottom */
+
+}
+
+/* RIGHT: CAPTCHA WRAPPER */
+.captcha-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 14px;
+  border-radius: 12px;
+  background: #f8f9fa;
+  border: 1px solid #d0d0d0;
+  min-height: 48px; /* match input height */
+  flex: 1;
+  max-width: 380px;
+}
+
+/* CAPTCHA TEXT BOX */
+.captcha-display {
+  flex: 1;
+  text-align: center;
+  padding: 6px 10px;
+  border-radius: 8px;
+  background: #ffffff;
+  border: 2px dashed #000;
+}
+
+.captcha-text {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  color: #000;
+  user-select: none;
+}
+
+/* CAPTCHA ICON BUTTONS */
+.captcha-actions {
+  display: flex;
+  gap: 8px;
+  margin-left: 12px;
+}
+
+.captcha-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 1.5px solid #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.captcha-btn img {
+  width: 18px;
+  height: 18px;
+}
+
+.captcha-btn:hover {
+  background: #eeeeee;
+  transform: scale(1.08);
+  box-shadow: 0 6px 14px rgba(59, 108, 255, 0.4);
+}
+
+.captcha-btn:active {
+  transform: scale(0.95);
+}
+
+/* ================================
+   SEND OTP BUTTON
+================================ */
+.send-otp-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 24px;
+  border: none;
+  border-radius: 4px;
+  background: linear-gradient(135deg, #021144, #0b6fa4);
+  color: #fff;
+  font-size: 1rem;
+  cursor: not-allowed;
+  transition: 0.15s ease;
+}
+
+.send-otp-btn:not(:disabled):hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 14px rgba(0, 102, 204, 0.3);
+}
+
+.send-otp-btn:disabled {
+  background: linear-gradient(135deg, #b0b0b0, #d0d0d0);
+  opacity: 0.8;
+}
+
+/* ================================
+   MASKED AADHAAR CHECKBOX
+================================ */
+.maskedAadhaar {
+  border: 1.5px solid #e0e0e1;
+  padding: 12px 16px;
+  background-color: #f9f9f9;
+  margin-top: 10px;
+}
+
+.circle-check {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.circle-check input {
+  display: none;
+}
+
+.custom-circle {
+  width: 18px;
+  height: 18px;
+  border: 2px solid #898989;
+  border-radius: 50%;
+  position: relative;
+}
+
+.circle-check input:checked + .custom-circle::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background: #898989;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.circle-text {
+  color: #5c5958;
+  font-weight: 400;
+}
+
+/* ================================
+   MOBILE RESPONSIVE
+================================ */
+@media (max-width: 576px) {
+  .captcha-row {
+    flex-direction: column;
+    gap: 12px;
+    align-items: stretch;
+  }
+
+  .captcha-wrapper {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .send-otp-btn {
+    width: 100%;
+  }
+}
+/* =========================
+   UIDAI TOP HEADER
+========================= */
+.uidai-header {
+  height: 72px;
+  background: linear-gradient(135deg, #b22923, #e2535d);
+  border-radius: 12px 12px 0 0;
+  padding: 0 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #ffffff;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  margin-bottom: 0;
+}
+
+/* LEFT TITLE */
+.uidai-header-left {
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+
+/* RIGHT LANGUAGE */
+.uidai-header-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 15px;
+}
+
+.lang-text {
+  opacity: 0.9;
+}
+
+.lang-separator {
+  opacity: 0.6;
+}
+
+.lang-btn {
+  background: #ffffff;
+  color: #1f3552;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.vk-wrapper {
+  position: fixed;
+  inset: 0;                /* top:0 right:0 bottom:0 left:0 */
+  margin: auto;
+
+  width: 96%;
+  max-width: 1000px;
+  height: fit-content;
+
+  background: #f5f5f5;
+  border: 1px solid #ccc;
+  padding: 8px;
+  border-radius: 12px;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.2);
+
+  z-index: 9999;
+}
+
+
+.full-screen-center {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+background: linear-gradient(135deg, #FDE8E8, #FAD4D4);
+}
+.aadhaar-wrapper {
+  width: 100%;
+  max-width: 1000px;   /* control your card width here */
+  margin: 0 auto;
+  padding-bottom: 24px;
+}
+
+.aadhaar-container {
+  width: 100%;
+  background: #ffffff;
+  padding: 24px;
+  box-sizing: border-box;
+}
+.kiosk-back-circle {
+  /* position: fixed; */
+  top: -80px;
+  left: 10px;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+   background: linear-gradient(135deg, #b22923, #e2535d);
+  color: #ffffff;
+  font-size: 28px;
+  font-weight: bold;
+  border: none;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  z-index: 9999;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* =========================
+   FAQ MODAL BACKDROP
+   ========================= */
+.faq-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  z-index: 20000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* =========================
+   FAQ MODAL CONTAINER
+   ========================= */
+.faq-modal {
+  background: #ffffff;
+  width: 90%;
+  max-width: 900px;
+  max-height: 80vh;
+  border-radius: 14px;
+  box-shadow: 0 20px 50px rgba(0,0,0,.4);
+  display: flex;
+  flex-direction: column;
+  animation: faqFadeIn 0.25s ease-out;
+}
+
+/* =========================
+   HEADER
+   ========================= */
+.faq-modal-header {
+  padding: 16px 20px;
+ background: linear-gradient(135deg, #b22923, #e2535d);
+  color: #fff;
+  border-radius: 14px 14px 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.faq-modal-header h5 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* Close Button */
+.close-btn {
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+/* =========================
+   BODY
+   ========================= */
+.faq-modal-body {
+  padding: 20px;
+  overflow-y: auto;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* FAQ QUESTIONS */
+.faq-modal-body h6 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #0d47a1;
+}
+
+/* FAQ ANSWERS */
+.faq-modal-body p {
+  margin-bottom: 14px;
+  color: #333;
+}
+
+/* LINKS INSIDE FAQ */
+.faq-modal-body a {
+  color: #0d47a1;
+  text-decoration: underline;
+}
+
+/* =========================
+   ANIMATION
+   ========================= */
+@keyframes faqFadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.help-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #b22923, #e2535d);
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 700;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.25);
+}
+
+.help-icon:active {
+  transform: scale(0.92);
+}
+.help-btn {
+  border: none !important;
+  outline: none !important;
+  background: transparent !important;
+  padding: 0;
+}
+
+.help-btn:focus,
+.help-btn:active {
+  outline: none !important;
+  box-shadow: none !important;
+}
+/* font */
+/* ---------- Header ---------- */
+.full-screen-center .uidai-header-left {
+  font-size: 28px;
+}
+
+.full-screen-center .selectAadhar {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+/* ---------- Radio buttons ---------- */
+.full-screen-center .radioBtn {
+  font-size: 1.05rem;
+}
+
+/* ---------- Inputs ---------- */
+.full-screen-center .floating-input {
+  font-size: 1.1rem;
+}
+
+.full-screen-center .floating-field label {
+  font-size: 0.95rem;
+}
+
+.full-screen-center .floating-input:focus + label,
+.full-screen-center .floating-input:not(:placeholder-shown) + label {
+  font-size: 0.85rem;
+}
+
+/* ---------- Captcha ---------- */
+.full-screen-center .captcha-text {
+  font-size: 1.4rem;
+}
+
+/* ---------- Buttons ---------- */
+.full-screen-center .send-otp-btn,
+.full-screen-center .resend-otp-btn {
+  font-size: 1.1rem;
+}
+
+.full-screen-center .help-icon {
+  font-size: 18px;
+}
+
+/* ---------- FAQ Modal ---------- */
+.full-screen-center .faq-modal-body {
+  font-size: 1.05rem;
+}
+
+.full-screen-center .faq-modal-header h5 {
+  font-size: 1.3rem;
+}
+/* Remove rounded corners only for e-Aadhaar page */
+/* .eaadhaar-page .card {
+  border-radius: 0 !important;
+} */
+.kiosk-back-circle-token {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+     background: linear-gradient(135deg, #b22923, #e2535d);
+    color: #fff;
+    border: none;
+    font-size: 26px;
+    cursor: pointer;
+    z-index: 1001;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease;
+}
+.header-back-btn:disabled {
+  opacity: 0.4;
+  pointer-events: none;
+  cursor: not-allowed;
+}

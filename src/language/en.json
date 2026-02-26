@@ -1,0 +1,388 @@
+{
+  "welcome_title": "Welcome to myAadhaar Kiosk",
+
+  "download_aadhaar": "Download Aadhaar",
+  "retrieve_aadhaar": "Retrieve Aadhaar number / EID / SID",
+  "verify_email_mobile": "Verify Email / Mobile",
+  "vid_generator": "VID generator",
+  "lock_unlock": "Lock / Unlock Aadhaar",
+  "check_pvc_status": "Check Aadhaar PVC card order status",
+  "check_deceased_status": "Check deceased Aadhaar deactivation status",
+  "check_validity": "Check Aadhaar validity",
+  "book_appointment": "Book an appointment",
+  "check_enrolment_status": "Check enrolment or update status",
+  "token_generation": "Token Generation",
+  "report_death": "Report death of a family member",
+  "document_update": "Document update",
+  "bank_seeding": "Bank seeding status",
+  "grievance_feedback": "Grievance and feedback",
+  "grievance_status": "Check Grievance / Feedback Status",
+
+  "english": "English",
+  "hindi": "Hindi",
+  "regional": "Regional",
+
+  "download_eaadhaar": "Download Your e-Aadhaar",
+  "select_id_type": "Select Aadhaar / Enrolment / VID / SID",
+
+  "aadhaar_number": "Aadhaar Number",
+  "enrolment_id": "Enrolment ID",
+  "virtual_id": "Virtual ID",
+  "sid": "SID",
+
+  "enter_aadhaar": "Enter Aadhaar Number",
+  "enter_enrolment": "Enter 14 digit Enrolment Number",
+  "select_date": "Select Date",
+  "select_time": "Select Time",
+  "enter_virtual_id": "Enter 16 digit Virtual ID",
+  "enter_sid": "Enter SID (S + 27 digits)",
+  "enter_captcha": "Enter Captcha",
+
+  "send_otp": "Send OTP",
+  "resend_otp": "Resend OTP",
+  "verify_download": "Verify & Download",
+  "enter_otp": "Enter OTP",
+
+  "masked_aadhaar": "Do you want a masked Aadhaar?",
+  "faq_title": "Frequently Asked Questions",
+
+  "please_wait": "Please wait...",
+  "loading": "Loading...",
+
+  "aadhaar_required": "Aadhaar is required",
+  "aadhaar_12_digits": "Aadhaar must be 12 digits",
+  "digits_only": "Only digits are allowed",
+  "captcha_required": "Captcha is required",
+  "server_error": "Server error. Please try again.",
+
+
+    "eaadhaar_fetched": "Your eAadhaar has been successfully fetched",
+
+  "password_info_title": "Your eAadhaar password will be of 7/8 characters in length.",
+
+  "password_info_desc1": "If your name contains more than 3 letters, your eAadhaar password will be a combination of the first four letters of your name followed by the year of birth.",
+
+  "password_info_desc2": "If your name contains only 3 letters, your eAadhaar password will be a combination of the first three letters of your name followed by the year of birth.",
+
+  "example1": "Example 1:",
+  "example2": "Example 2:",
+
+  "enter_pdf_password": "Enter PDF password",
+
+  "processing": "Processing...",
+  "print": "Print",
+
+  "enter_pdf_password_error": "Please enter PDF password",
+  "invalid_pdf_password": "Please enter valid PDF password",
+  "pdf_not_available": "PDF data not available",
+
+  "printing_wait": "Your Aadhaar card is printing. Please wait...",
+  "collect_aadhaar": "Please collect your Aadhaar card.",
+  "printer_not_available": "Printer not available. Please contact admin",
+  "invalid_pdf_or_password": "Invalid PDF or password",
+  "pdf_failed": "Failed to open PDF. Please check password.",
+
+  "name": "Name",
+  "dob": "Date of Birth",
+  "example1_text": "If your name is <1>ANISH Y KUMAR</1> and your Year of Birth is <3>1989</3>, then your eAadhaar password will be <5>ANIS1989</5>",
+
+"example2_text": "If your name is <1>RIA</1> and your Year of Birth is <3>1989</3>, then your eAadhaar password will be <5>RIA1989</5>",
+"or": "OR",
+"verify_continue": "Verify & Continue",
+"name_required": "Name is required",
+"dob_required": "Date of Birth is required",
+"mobile_required": "Enter mobile number or email",
+"invalid_mobile": "Mobile number must be exactly 10 digits",
+"invalid_email": "Invalid email address",
+"name_invalid_alphabets": "Name should contain only alphabets",
+"captcha_not_loaded": "Captcha not loaded",
+ "aadhaar_sent_message": "Your Aadhaar number {{aadhaar}} is sent to your registered mobile number.",
+  "check_mobile_message": "Please check your registered mobile number to retrieve your Aadhaar details.",
+ 
+
+  "verify_details_title": "Please Enter Required Details to Verify Email / Mobile Number",
+  "verify_mobile": "Verify Mobile Number",
+  "verify_email": "Verify Email Address",
+
+  "enter_mobile": "Enter Mobile Number",
+  "enter_email": "Enter Email Address",
+
+  "submit": "Submit",
+  "enter_verification_code": "Enter Verification Code",
+  "verify": "Verify",
+
+
+  "email_required": "Email is required",
+
+  "verification_code_invalid": "Enter valid 6-digit code",
+  "invalid_verification_code": "Invalid verification code",
+  "something_wrong": "Something went wrong. Please try again.",
+    "verification_successful": "Verification Successful",
+  "mobile_verified_success": "Entered Mobile number has been successfully verified.",
+  "go_home": "Go To Home",
+    "generate_retrieve_vid": "Generate or Retrieve VID",
+  "please_select": "Please Select",
+  "generate_vid": "Generate VID",
+  "retrieve_vid": "Retrieve VID",
+
+  "verify_otp": "Verify OTP",
+
+  "play_audio_captcha": "Play Audio Captcha",
+  "refresh_captcha": "Refresh",
+  
+
+  "aadhaar_invalid_12": "Enter valid 12-digit Aadhaar number",
+  "aadhaar_must_12": "Aadhaar must be 12 digits",
+
+  "captcha_expired": "Captcha expired. Please refresh.",
+  "otp_invalid_6": "Enter valid 6-digit OTP",
+    "vid_sent_message": "Your Virtual ID (VID) has been sent to your Aadhaar registered mobile number",
+  "vid_info_message": "In case you have changed your mobile number or wish to change your registered Email, you are required to get it updated in your Aadhaar as soon as possible.",
+  "lock_unlock_title": "Lock/Unlock Aadhaar",
+  "how_it_works": "How it works",
+
+  "virtual_id_title": "Virtual ID",
+  "virtual_id_desc": "To Lock/Unlock your Aadhaar, you must use your 16-digit Virtual ID (VID).",
+
+  "lock_aadhaar_title": "Lock your Aadhaar",
+  "lock_aadhaar_desc": "Once your VID has been generated, proceed to lock your Aadhaar with your VID.",
+
+  "unlock_aadhaar_title": "Unlock your Aadhaar",
+  "unlock_aadhaar_desc": "To unlock your Aadhaar, please return here and use your VID.",
+
+  "generate_vid_helper": "If you don't have one, please",
+  "generate_vid_link": "generate your VID",
+  "from_dashboard": "first from the Dashboard.",
+
+  "lock_helper_text": "Once locked, authentication via your Aadhaar number is disabled.",
+  "unlock_helper_text": "Unlocking will also restore your ability to use your Aadhaar number.",
+
+  "back": "Back",
+  "next": "Next",
+
+  "lock_aadhaar": "Lock Aadhaar",
+  "unlock_aadhaar": "Unlock Aadhaar",
+
+  "enter_vid": "Enter Virtual ID Number",
+  "enter_full_name": "Enter Full Name",
+  "enter_pincode": "Enter Pincode",
+
+ 
+  "sending": "Sending...",
+  "otp_sent": "OTP Sent",
+
+
+
+  "vid_required": "Virtual ID is required",
+  "vid_16_digits": "Virtual ID must be 16 digits",
+
+
+
+  "pincode_required": "Pincode is required",
+  "pincode_6_digits": "Pincode must be 6 digits",
+
+ 
+  "otp_6_digits": "OTP must be 6 digits",
+
+ 
+
+  "declaration_lock": "I understand that after locking my Aadhaar, I will be able to perform authentication using only Virtual ID (VID) and not Aadhaar Number.",
+  
+
+"check_pvc_order_status_title": "Check Aadhaar PVC Card Order Status",
+
+"enter_srn_label": "Enter SRN",
+"srn_required": "SRN is required",
+"srn_invalid": "SRN must be 14 characters (S + 13 digits)",
+
+"current_status": "Current Status",
+"order_date": "Order Date",
+"awb_number": "Air Way Bill Number",
+"dispatch_date": "Date of Dispatch",
+
+"order_status_result": "Order Status Details",
+"check_deceased_status_title": "Check Deceased Aadhaar Deactivation Status",
+
+"enter_sid_27": "Enter 'S' followed by 27 digit number",
+
+"sid_required": "SID is required",
+"sid_must_start": "SID must start with 'S'",
+"sid_only_digits": "Only digits allowed after 'S'",
+"sid_27_digits": "SID must be 'S' followed by 27 digits",
+"sid_length_exceeded": "SID length exceeded",
+
+"captcha_refresh_error": "Captcha not loaded. Please refresh.",
+"captcha_verification_failed": "Captcha verification failed. Try again.",
+"check_aadhaar_validity_title": "Check Aadhaar Validity",
+"proceed": "Proceed",
+"aadhaar_verification_completed": "Aadhaar Verification Completed",
+"age_band": "Age Band",
+"state": "State",
+"aadhaar_document_update_required": "This Aadhaar number requires Document (Proof of Identity - POI document & Proof of Address - POA) update. Please upload the documents through https://myaadhaar.uidai.gov.in or visit nearby Aadhaar Seva Kendra.",
+
+  "appointment": {
+    "loginTitle": "Login to Appointment Portal",
+    "otpAuth": "via OTP Authentication",
+    "mobileOtp": "With Mobile OTP",
+    "emailOtp": "With Email OTP",
+    "name": "Name",
+    "mobileNumber": "Mobile Number",
+    "email": "Email ID",
+    "enterCaptcha": "Enter Captcha",
+    "sendOtp": "Send OTP",
+    "resendOtp": "Resend OTP",
+    "resendIn": "Resend OTP will be enabled in",
+    "seconds": "seconds",
+    "enterOtp": "Enter OTP",
+    "authenticate": "Authenticate with OTP",
+    "name_required": "Name is required",
+"mobile_required_appointment": "Mobile number is required",
+"email_required_appointment": "Email is required",
+"invalid_email_format": "Please enter a valid email address",
+"invalid_captcha": "Invalid captcha. Please try again.",
+"something_wrong": "Something went wrong. Please try again."
+  },
+  "common": {
+    "back": "Back"
+  },
+  "bank_seeding_login_title": "Login to Aadhaar via OTP",
+    "selectDetails": "Select details",
+  "residentIndian": "Resident Indian",
+  "selectAgeGroup": "Select Age Group",
+  "age0to5": "0-5 Years",
+  "age5to18": "5-18 Years",
+  "age18plus": "18+ Years",
+  "selectServiceType": "Select Service Type",
+  "enrollment": "Enrollment",
+  "update": "Update",
+  "proceedForCentreSelection": "Proceed for centre selection",
+  "searchAadhaarSevaKendra": "Search Aadhaar Seva Kendra",
+  "pincodeSearch": "Pincode Search",
+  "searchByPincode": "Search By Pincode",
+
+  "searchNearbyCentres": "Search nearby centres (within 1 - 49 kms)",
+  "enterRange": "Enter range",
+    "checkEnrolmentOrUpdateStatus": "Check Enrolment or Update Status",
+  "checkIfAadhaarGenerated": "Check if your Aadhaar is generated or updated.",
+  "enrolment14DigitInfo": "The 14 digit enrolment number printed on acknowledgement slip.",
+  "lostEidText": "In case you lost EID you can retrieve it.",
+  "clickHere": "Click here",
+  "enter14DigitEnrolment": "Enter 14 digit Enrolment Number",
+  "mentionDateTimeOptional": "Mention date and time as per acknowledgement slip (optional)",
+  "selectDate": "Select Date",
+  "selectTime": "Select Time",
+  "enter8DigitUrn": "Enter 8 digit URN number",
+  "enterSidNumber": "Enter 'S' followed by 27 digit number",
+  "enterSrnNumber": "Enter SRN number",
+  "enterCaptcha": "Enter Captcha",
+
+  "frequentlyAskedQuestions": "Frequently Asked Questions",
+  "enterDetailsToCheckStatus": "Enter your details and submit to check your Aadhaar status.",
+  "draft": "Draft",
+  "payment": "Payment",
+  "verification": "Verification",
+  "validation": "Validation",
+  "completed": "Completed",
+  "aadhaarUpdatedMessage": "Your Aadhaar has been updated. While your Aadhaar is being printed and posted to you, please download eAadhaar from",
+    "checkGrievanceStatus": "Check Grievance / Feedback Status",
+  "enterServiceRequestNumber": "Enter Service Request Number",
+
+  "grievanceFeedbackNumber": "Grievance / Feedback Number",
+  "status": "Status",
+
+  "serviceNumberRequired": "Service Request Number is required",
+  "captchaRequired": "Captcha is required",
+  "captchaNotLoaded": "Captcha not loaded",
+  "invalidCaptchaOrService": "Invalid Captcha or Service Number",
+    "uploadTitle": "Upload documents in support of identity and address",
+  "whatToSubmit": "What to submit?",
+  "howToSubmit": "How to submit?",
+  "whatToSubmitContent": "Ration card, Voter identity card, Government-issued identity card/certificate having address, and Indian Passport serve as proof of both identity and address.\n\nPAN card, Driving license, Secondary or Senior School mark sheet serve as proof of identity only.\n\nElectricity/water/gas bill (last 3 months), Bank passbook, rent/lease agreement serve as proof of address only.",
+  "howToSubmitContent": "The documents can be submitted online on myAadhaar portal or by visiting any Aadhaar centre.",
+  "clickToSubmit": "Click To Submit",
+  "needHelp": "Need Help",
+  "videoGuide": "Video guide",
+  "knowMore": "Know More?",
+  "callTollFree": "Call toll-free (1947)",
+    "grievanceFeedback": "Grievance and Feedback",
+  "enterRequiredDetails": "Please enter required details",
+  "enterName": "Enter Name as per Aadhaar*",
+  "enterMobile": "Enter Mobile Number*",
+  "enterEmail": "Enter Email Address",
+  "enterState": "Enter State*",
+  "selectState": "Select State",
+  "grievanceFor": "Grievance / Feedback For (Self/Others)*",
+  "select": "Select",
+  "grievanceType": "Enter Grievance / Feedback Type*",
+  "categoryType": "Enter Category Type*",
+  "mode": "Mode*",
+  "enterSRN": "Enter Service Request Number (SRN) *",
+  "enterEID": "Enter 14 / 28 digit Enrolment Number",
+
+  "enterURN": "Enter 8 digit URN Number",
+  "supportingDocument": "Select Supporting Document (if any)",
+
+
+  "pleaseWait": "Please wait...",
+  "faqTitle": "Frequently Asked Questions",
+
+  "nameRequired": "Name is required",
+  "mobileRequired": "Mobile number is required",
+  "mobileInvalid": "Enter valid 10 digit mobile number",
+  "emailInvalid": "Enter valid email address",
+  "stateRequired": "State is required",
+  "grievanceForRequired": "Please select grievance for",
+  "grievanceTypeRequired": "Please select grievance type",
+  "categoryRequired": "Please select category type",
+  "grievanceTextRequired": "Grievance details are required",
+ 
+
+  "online": "Online",
+  "offline": "Offline",
+  "maadhaar": "mAadhaar mobile app",
+  "onlineHelp": "Enter 14 digit ID starting with S13 or S22",
+  "offlineHelp": "Enter 28 digit Enrolment ID",
+  "maadhaarHelp": "Enter 8 digit URN",
+    "grievanceSuccessMessage": "Your grievance/feedback has been registered successfully. Please note your service request number (SRN) {{srn}} for further communication.",
+  "shareExperience": "Please share your experience while filing your Grievance / Feedback by rating below",
+  "feedbackPlaceholder": "Please share your feedback",
+    "login": "Login",
+  "enterAadhaar": "Enter Aadhaar Number",
+
+  "getOtp": "Get OTP",
+  "otpGenerated": "Successfully generated One Time Password (OTP)",
+  "enterOtp": "Enter OTP",
+  
+  "invalidOtp": "Invalid OTP",
+   "reportDeathTitle": "Report Death of a Family Member",
+
+  "loginWithOtp": "Login With OTP",
+    "tokenGenerationTitle": "Token Generation & Receipt",
+  "enterVisitorDetails": "Enter Visitor Details",
+  "fullName": "Full Name",
+  "mobileNumber": "Mobile Number",
+  "serviceType": "Service Type",
+  "selectService": "-- Select Service --",
+  "generateReceipt": "Generate Receipt",
+  "pleaseCollectReceipt": "Please collect your receipt",
+  "receiptSummary": "Receipt Summary",
+
+  "mobile": "Mobile",
+  "service": "Service",
+  "date": "Date",
+  "ok": "OK",
+  "welcomeTitle": "Welcome to Home page of Appointment Portal. Please select from below choices for booking appointment",
+"centreAppointment": "Centre Appointment",
+"centreDescription": "This facility is for booking an appointment at an Aadhaar Seva Kendra for Aadhaar Enrolment and Update Services",
+"manageAppointments": "Manage Appointments",
+"manageDescription": "Status of various requests originated by you in the recent past. You can check the detailed status by clicking on the downward arrow icon.",
+"noAppointments": "No Appointments available"
+
+
+  
+
+
+
+
+
+}

@@ -1,0 +1,89 @@
+.centre-container {
+  min-height: 100vh;
+  background: #f5f7fa;
+
+  display: flex;
+  justify-content: center;   /* horizontal center */
+  align-items: center;       /* vertical center */
+
+  gap: 40px;                 /* space between cards */
+  padding: 40px 20px;
+  flex-wrap: wrap;           /* responsive for small screens */
+}
+
+
+/* Card */
+.centre-card {
+  width: 400px;
+  max-width: 95%;
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  border: 2px solid #1a73a8;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* Title */
+.centre-card h3 {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+/* Inputs */
+.centre-input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+}
+
+/* Proceed button */
+.centre-proceed-btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(to right, #0b1b5c, #1a73a8);
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+/* Search button */
+.centre-search-btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: #bdbdbd;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+/* Divider */
+.divider {
+  text-align: center;
+  margin: 20px 0;
+  position: relative;
+}
+
+.divider span {
+  background: white;
+  padding: 0 10px;
+  position: relative;
+  z-index: 1;
+}
+
+.divider:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: #ddd;
+}

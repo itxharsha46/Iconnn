@@ -1,0 +1,252 @@
+* {
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #ffffff;
+}
+
+.kiosk-container {
+  padding: 30px 40px;
+}
+
+/* Title */
+.kiosk-title {
+  text-align: center;
+  font-size: 44px;        
+  font-weight: 700;      
+  margin-bottom: 25px;
+  letter-spacing: 0.5px; 
+}
+.banner-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+}
+
+/* Banner wrapper */
+.kiosk-banner {
+  width: 100%;
+  height: 90% !important;
+  border-radius: 28px;
+  overflow: hidden;
+  background: transparent;   /* remove green fill */
+}
+
+/* Image controls size */
+.banner-img {
+  width: 100%;
+  height: 90% !important;
+  height: auto;              /* KEY FIX */
+  display: block;
+  border-radius: 28px;
+}
+
+
+
+
+
+
+.mascot {
+  height: auto;
+  width: min(40vw, 580px);  
+  max-height: 70vh;        
+  object-fit: contain;
+}
+
+
+.banner-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+}
+/* White circular border only */
+.fingerprint-box {
+  width: 260px;
+  height: 260px;
+  border: 6px solid #ffffff;   
+  border-radius: 50%;
+  background: transparent; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 14px;
+}
+
+/* Fingerprint image */
+.fingerprint-box img {
+  height: 170px;
+  width: auto;
+}
+
+
+.myaadhaar-text {
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+gap: 50px 33px;
+  margin-top: clamp(20px, 5vw, 60px);     
+}
+
+/* Service Card */
+.service-card {
+  height: 140px;            
+  border-radius: 44px;     
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;  
+  padding: 0 20px;
+  /* box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25), 0 4px 6px rgba(0, 0, 0, 0.15); */
+  cursor: pointer;
+  transition: transform 0.15s ease;
+}
+
+.service-card:hover {
+  transform: scale(1.03);
+}
+
+.red {
+  background: linear-gradient(135deg, #b22923, #e2535d);
+  box-shadow: 0 8px 20px rgba(178, 41, 35, 0.4), 0 4px 6px rgba(226, 83, 93, 0.25);
+}
+
+.red:hover {
+  box-shadow: 0 12px 30px rgba(178, 41, 35, 0.5), 0 6px 12px rgba(226, 83, 93, 0.35);
+}
+
+/* Orange card shadow */
+.orange {
+  background: linear-gradient(135deg, #da5d1a, #ed832b);
+  box-shadow: 0 8px 20px rgba(218, 93, 26, 0.4), 0 4px 6px rgba(237, 131, 43, 0.25);
+}
+
+.orange:hover {
+  box-shadow: 0 12px 30px rgba(218, 93, 26, 0.5), 0 6px 12px rgba(237, 131, 43, 0.35);
+}
+
+/* Yellow card shadow */
+.yellow {
+  background: linear-gradient(135deg, #e7a40a, #f0c114);
+  box-shadow: 0 8px 20px rgba(231, 164, 10, 0.4), 0 4px 6px rgba(240, 193, 20, 0.25);
+}
+
+.yellow:hover {
+  box-shadow: 0 12px 30px rgba(231, 164, 10, 0.5), 0 6px 12px rgba(240, 193, 20, 0.35);
+}
+
+/* Green card shadow */
+.green {
+  background: linear-gradient(135deg, #146139, #319246);
+  box-shadow: 0 8px 20px rgba(20, 97, 57, 0.4), 0 4px 6px rgba(49, 146, 70, 0.25);
+}
+
+.green:hover {
+  box-shadow: 0 12px 30px rgba(20, 97, 57, 0.5), 0 6px 12px rgba(49, 146, 70, 0.35);
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 1024px) {
+  .service-card {
+    height: 130px;
+  }
+}
+
+@media (max-width: 768px) {
+  .services-grid {
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: clamp(15px, 8vw, 40px);
+  }
+
+  .service-card {
+    height: 120px;
+    font-size: 16px;
+    border-radius: 20px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .mascot {
+    width: 45vw;
+  }
+}
+
+/* @media (max-width: 768px) {
+  .kiosk-banner {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .mascot {
+    width: 70vw;
+    max-height: 50vh;
+  }
+} */
+
+
+.service-icon {
+  width: 54px;
+  height: 54px;
+}
+.service-title {
+  font-weight: bold;
+  font-size: 1.1rem; 
+}
+/* Header row */
+.header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+
+
+/* Centered title */
+.kiosk-title {
+  font-size: 44px;
+  font-weight: 700;
+  margin: 0;
+}
+.language-buttons {
+  display: flex;
+  gap: 12px;
+}
+
+
+.language-dropdown {
+  position: absolute;
+  right: 0;
+}
+
+/* Red dropdown button */
+.lang-btn {
+  background: #b22923;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.lang-btn:hover {
+  background: #e2535d;
+}
+.lang-btn.active {
+  background: #146139; /* green highlight */
+  box-shadow: 0 0 0 2px rgba(20, 97, 57, 0.4);
+}
+
+

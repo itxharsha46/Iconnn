@@ -1,0 +1,232 @@
+/* ================= MAIN BODY ================= */
+.main-body {
+  /* min-height: 100vh; */
+  background: linear-gradient(135deg, #021144, #0b6fa4);
+  /* padding: 60px 40px; */
+  color: #fff;
+}
+
+/* .back-color {
+  background: linear-gradient(135deg, #03154c, #0b6fa4);
+} */
+
+/* ================= PHONE SECTION ================= */
+.col-lg-5 {
+  display: flex;
+  justify-content: flex-end; /* phone aligned right in column */
+  align-items: flex-start;
+}
+
+.phone-wrapper {
+  width: 420px;
+  height: 420px;
+  display: block;
+  margin-left: 0;    /* ✅ left aligned */
+  margin-right: auto;
+ 
+}
+
+/* ================= DOWNLOAD (MIDDLE COLUMN) ================= */
+
+
+.download-text {
+  display: block;
+  text-align: left;
+}
+
+.download-text h2 {
+  color: #fff;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 10px;
+}
+
+.download-row {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
+  margin-top: 15px;
+}
+
+.qr-img {
+  width: 100px;
+  background: #fff;
+  padding: 6px;
+}
+
+.store-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.google_play,
+.app_store {
+  width: 130px;
+  cursor: pointer;
+}
+
+.feedback {
+  margin-top: 20px;
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 1.3;
+  text-align: left;
+}
+
+/* ================= LOGIN CARD (RIGHT COLUMN) ================= */
+.col-lg-4 {
+  display: flex;
+
+  align-items: flex-start;
+}
+
+.login-card {
+  background: #fff;
+  color: #000;
+  width: 380px;
+  padding: 35px;
+  border-radius: 12px;
+  
+    height: 388px;
+    padding: 16px;         
+    text-align: center;
+  
+}
+
+.login-card h3 {
+  margin-bottom: 25px;
+  color: #0b3c91;
+}
+
+.fingerprint {
+  width: 150px;
+  margin: 20px 0;
+}
+
+.login-btn {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(90deg, #061c60, #11a0d7);
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  border-radius: 6px;
+  margin-top: 10px;
+}
+
+.login-info {
+  font-size: 0.7rem;
+  font-weight: 400;
+  text-align: center;
+  padding-top: 5px;    /* space above */
+ 
+}
+
+
+/* ================= LANGUAGE STRIP ================= */
+.language-strip {
+  background: #0a2a5e;
+  color: #fff;
+  padding: 12px 10px;
+  font-size: 14px;
+}
+
+.language-item {
+  margin: 6px 10px;
+  cursor: pointer;
+  white-space: nowrap;
+  font-size: 14px;
+
+}
+
+.language-item:hover {
+  text-decoration: underline;
+}
+
+/* ================= INFO STRIP ================= */
+.info-strip {
+  background: #fff;
+  padding: 15px 10px;
+  font-size: 14px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25); /* 🔥 darker bottom shadow */
+}
+
+
+
+.info-item {
+  /* padding: 6px 15px; */
+  cursor: pointer;
+  font-weight: 700;   /* bold text */
+  color: #000;  
+  font-size: 15px;
+  
+}
+
+
+.info-item:hover {
+  text-decoration: underline;
+}
+.img-fluid-finger{
+  height: 180px!important;
+
+}
+.login-section__main-heading{
+  color: #22458a;
+        font-size: 22px;
+        font-weight: 700;
+        text-align: left;
+      margin-top:10px;
+
+}
+
+.divider {
+  width: 1px;
+  height: 18px;
+  background: #ccc;
+}
+
+/* ================= MOBILE RESPONSIVE ================= */
+@media (max-width: 768px) {
+
+  .login-card {
+    width: 328px;
+    padding: 16px;           /* 🔽 reduce padding */
+    text-align: center;
+  }
+
+  .login-card h3 {
+    margin-bottom: 8px;      /* 🔽 reduce */
+    font-size: 18px;
+  }
+
+ .fingerprint {
+  max-height: 140px;   /* 🔥 KEY LINE */
+  width: auto;
+  object-fit: contain;
+  margin: 10px 0;
+}
+
+
+  .login-btn {
+    padding: 10px;
+    margin-top: 10px;
+  }
+  .col-lg-4 {
+    display: flex;           
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-bottom: 30px;
+  }
+
+  .login-info {
+    font-size: .7rem;
+    font-weight: 400;
+    padding-top: 3px;
+    text-align: center;
+  }
+}
+

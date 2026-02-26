@@ -1,0 +1,3 @@
+window.APP_CONFIG = {
+  IDLE_TIMEOUT: 180000 
+};

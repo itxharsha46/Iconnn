@@ -1,0 +1,64 @@
+.uidai-header-val{
+    height: 72px;
+   background: linear-gradient(135deg, #146139, #319246);
+    border-radius: 12px 12px 0 0;
+    padding: 0 22px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    margin-bottom: 0;
+}
+.kiosk-back-circle-validity {
+      /* position: fixed; */
+  top: -80px;
+  left: 10px;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #146139, #319246);
+    color: #ffffff;
+    font-size: 28px;
+    font-weight: bold;
+    border: none;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.help-icon-aadhar-validity{
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+   background: linear-gradient(135deg, #146139, #319246);
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+}
+.faq-modal-header-validity{
+  
+    padding: 16px 20px;
+      background: linear-gradient(135deg, #146139, #319246);
+    color: #fff;
+    border-radius: 14px 14px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.full-screen-center-validity {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+background: linear-gradient(135deg, #E8F5E9, #C8E6C9);
+}

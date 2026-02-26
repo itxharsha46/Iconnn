@@ -1,0 +1,122 @@
+.service-card {
+  position: relative;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  min-height: 220px;
+  overflow: hidden;
+  cursor: pointer;
+
+  /* strong shadow on all 4 sides */
+  box-shadow:
+    0 2px 6px rgba(0, 0, 0, 0.08),
+    0 8px 20px rgba(0, 0, 0, 0.12),
+    0 0 0 1px rgba(0, 0, 0, 0.04);
+
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow:
+    0 4px 10px rgba(0, 0, 0, 0.10),
+    0 16px 35px rgba(0, 0, 0, 0.22),
+    0 0 0 1px rgba(0, 0, 0, 0.06);
+}
+
+/* animated background layer */
+.service-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, #f8f9fa, #e9ecef);
+  transform: translateY(100%);
+  transition: transform 0.45s ease;
+  z-index: 0;
+}
+
+/* inner content */
+.card-inner {
+  position: relative;
+  z-index: 1;
+  transform: translateY(30px);
+  transition: transform 0.45s ease;
+}
+
+/* arrow */
+.card-arrow {
+  position: absolute;
+  bottom: 12px;
+  right: 14px;
+  z-index: 2;
+
+  opacity: 0;
+  transform: translateX(-10px);
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+.service-card:hover .card-arrow {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* hover background */
+.service-card:hover::before {
+  transform: translateY(0);
+}
+
+.service-card:hover .card-inner {
+  transform: translateY(0);
+}
+
+/* icon animation */
+.service-card img {
+  transition: transform 0.45s ease;
+}
+
+.service-card:hover img {
+  transform: translateY(-6px) scale(1.05);
+}
+
+/* text */
+.service-card h6,
+.service-card p {
+  color: #212529;
+}
+
+.services__section {
+  font-size: 1rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.cardHead {
+  font-size: calc(1rem + 2px);
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.cardSub {
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+/* bottom gradient line */
+.service-card::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 0;
+  background: linear-gradient(90deg, #021144, #0b6fa4);
+  transition: width 0.35s ease;
+  z-index: 2;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+
+.service-card:hover::after {
+  width: 100%;
+}

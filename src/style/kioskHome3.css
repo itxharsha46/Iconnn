@@ -1,0 +1,125 @@
+* {
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.kiosk-root {
+  min-height: 100vh;
+  padding: 30px;
+  background: linear-gradient(#f7f7f7, #ffffff);
+}
+
+/* Header */
+.kiosk-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.aadhaar-logo {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.aadhaar-logo img {
+  height: 70px;       /* adjust as needed */
+  width: auto;
+}
+
+
+.language-switch {
+  background: #fff;
+  border-radius: 20px;
+  padding: 6px 14px;
+  display: flex;
+  gap: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,.1);
+}
+
+.language-switch span {
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.language-switch .active {
+  color: #d32f2f;
+}
+
+/* Titles */
+.main-title {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 40px;
+  font-weight: 800;
+}
+
+.sub-title {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.instruction {
+  text-align: center;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+/* Layout */
+.content {
+  display: flex;
+  margin-top: 40px;
+  gap: 40px;
+}
+
+.mascot img {
+  width: 260px;
+}
+
+/* Services */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+  flex: 1;
+}
+
+.service-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 22px;
+  border-radius: 22px;
+  color: #fff;
+  font-weight: 700;
+  box-shadow: 0 12px 20px rgba(0,0,0,.15);
+}
+
+.service-card .icon {
+  font-size: 34px;
+}
+
+.service-card .title {
+  font-size: 20px;
+}
+
+.service-card .sub {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/* Colors */
+.blue { background: linear-gradient(135deg,#1e88e5,#1565c0); }
+.blue2 { background: linear-gradient(135deg,#1976d2,#0d47a1); }
+.green { background: linear-gradient(135deg,#43a047,#2e7d32); }
+.yellow { background: linear-gradient(135deg,#fbc02d,#f9a825); }
+.orange { background: linear-gradient(135deg,#fb8c00,#ef6c00); }
+.red { background: linear-gradient(135deg,#e53935,#b71c1c); }
+.purple { background: linear-gradient(135deg,#8e24aa,#6a1b9a); }
+
+/* Touch friendly */
+.service-card:active {
+  transform: scale(0.97);
+}

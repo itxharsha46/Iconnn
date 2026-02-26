@@ -1,0 +1,68 @@
+.uidai-header-order {
+    height: 72px;
+  background: linear-gradient(135deg, #da5d1a, #ed832b);
+    border-radius: 12px 12px 0 0;
+    padding: 0 22px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    margin-bottom: 0;
+}
+.kiosk-back-circle-order {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+      background: linear-gradient(135deg, #da5d1a, #ed832b);
+    color: #ffffff;
+    font-size: 28px;
+    font-weight: bold;
+    border: none;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.help-icon-aadhar-order{
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+  background: linear-gradient(135deg, #da5d1a, #ed832b);
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+}
+.faq-modal-header-order{
+  
+    padding: 16px 20px;
+     background: linear-gradient(135deg, #da5d1a, #ed832b);
+    color: #fff;
+    border-radius: 14px 14px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.order-status-card {
+  border-top: 4px solid #007bff;
+  padding-top: 15px;
+}
+
+.status-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-bottom: 1px solid #e0e0e0;
+  font-size: 16px;
+}

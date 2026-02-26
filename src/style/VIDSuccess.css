@@ -1,0 +1,89 @@
+.vid-success-wrapper {
+  min-height: 100vh;
+  background: #f4f6f8;
+  position: relative;
+}
+
+
+/* Breadcrumb */
+.breadcrumb-container {
+  padding: 20px 40px;
+  font-size: 14px;
+  color: #6c757d;
+}
+
+.breadcrumb-container .active {
+  color: #1c6ea4;
+  font-weight: 500;
+}
+
+.vid-success-content {
+  text-align: center;
+  padding: 0 20px;
+  margin-top: calc(50vh - 220px);
+}
+
+
+/* Icon Circle */
+.success-icon-circle {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #da5d1a, #ed832b);
+  margin: 0 auto 30px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.success-check {
+  font-size: 60px;
+  color: #fff;
+}
+
+/* Title */
+.success-title {
+  font-size: 28px;
+  font-weight: 500;
+  color: #1c6ea4;
+  line-height: 1.6;
+}
+
+.vid-number {
+  font-size: 30px;
+  font-weight: 600;
+}
+
+/* Info Text */
+.success-info-vid {
+  margin-top: 20px;
+  font-size: 16px;
+  color: #555;
+  max-width: 650px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Bottom Button */
+.bottom-btn-container {
+  text-align: center;
+  padding: 25px;
+  /* border-top: 1px solid #ddd; */
+  background: #f4f6f8;
+}
+
+.dashboard-btn-vid {
+   background: linear-gradient(135deg, #da5d1a, #ed832b);
+  color: #fff;
+  padding: 12px 40px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  display: inline-block;
+}
+
+.dashboard-btn:hover {
+  opacity: 0.9;
+}

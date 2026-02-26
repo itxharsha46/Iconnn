@@ -1,0 +1,171 @@
+/* src/style/OrderAadhaarPVC.css */
+
+.page-wrapper {
+  background-color: #fcfcfc;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  font-family: Arial, sans-serif;
+}
+
+.kiosk-back-btn {
+  position: absolute;
+  top: 20px; 
+  left: 20px;
+  background-color: #b53b3b;
+  color: white;
+  border-radius: 50%;
+  width: 90px; 
+  height: 90px;
+  border: none;
+  font-size: 48px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  z-index: 10;
+}
+
+.central-card {
+  width: 100%;
+  max-width: 1000px; /* cite: central-card */
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+  overflow: hidden;
+  position: relative;
+}
+
+.card-header-red {
+  background-color: #b53b3b;
+  color: white;
+  padding: 12px 25px; 
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.split-layout {
+  display: flex;
+  min-height: 600px;
+}
+
+.form-side {
+  flex: 1; 
+  padding: 25px 40px; 
+  position: relative;
+}
+
+/* Position FAQ button at the absolute right end of the card */
+.instruction-with-faq {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Pushes text to left and button to absolute right */
+  width: 100%;
+  margin-bottom: 12px;
+}
+
+.faq-inline-btn {
+  background-color: #b53b3b;
+  color: white;
+  border: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-right: -10px; /* Moves it even closer to the card's edge */
+}
+
+.instruction-text {
+  font-size: 1.35rem; 
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 0;
+}
+
+.selection-group { margin-bottom: 15px; }
+
+.selection-group:nth-child(2) .instruction-text { margin-bottom: 12px; }
+
+.radio-selection-group { display: flex; gap: 40px; margin-bottom: 10px; }
+
+.radio-container { display: flex; align-items: center; cursor: pointer; font-size: 1.25rem; }
+
+.radio-container input { transform: scale(1.6); margin-right: 15px; }
+
+.standard-input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #444;
+  border-radius: 8px;
+  font-size: 1.4rem;
+}
+
+.captcha-flex { display: flex; gap: 20px; align-items: center; }
+
+.captcha-box {
+  background: #f0f0f0;
+  border: 1px solid #ccc;
+  min-width: 160px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.4rem;
+  border-radius: 6px;
+}
+
+.primary-blue-btn {
+  background-color: #1a73e8;
+  color: white;
+  width: 100%;
+  padding: 14px;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 1.4rem;
+  border: none;
+  margin-top: 5px;
+}
+
+.disclaimer-section { margin-top: 15px; border-top: 1px solid #ddd; padding-top: 10px; }
+
+.disclaimer-section h6 { font-weight: bold; font-size: 1.3rem; margin-bottom: 5px; }
+
+.disclaimer-section li { font-size: 1.15rem; color: #555; line-height: 1.4; margin-bottom: 4px; }
+
+.faq-side {
+  width: 450px; 
+  background-color: #f9f9f9;
+  border-left: 2px solid #eee;
+  padding: 25px 30px;
+  overflow-y: auto;
+}
+
+.faq-side-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #b53b3b;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+}
+
+.close-faq { background: none; border: none; font-size: 2rem; cursor: pointer; color: #666; }
+
+.mascot-watermark {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  height: 200px;
+  opacity: 0.08;
+  pointer-events: none;
+}

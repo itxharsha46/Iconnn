@@ -1,0 +1,288 @@
+
+
+
+
+
+/* ================================
+   GLOBAL RESET + HARD SCROLL LOCK
+================================ */
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overscroll-behavior: none; 
+} */
+
+/* ================================
+   HTML & BODY (NO SCROLL EVER)
+================================ */
+html,
+body {
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  background-color: #ff9009;
+
+  overflow: hidden;     /* 🔒 HARD LOCK */
+  touch-action: none;   /* 🔒 disable touch scroll */
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* ================================
+   ROOT REACT CONTAINERS
+================================ */
+#root,
+.App {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;     /* 🔒 NO SCROLL */
+  background: transparent;
+}
+
+/* ================================
+   MAIN APP LAYOUT
+================================ */
+.app-layout {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+/* ================================
+   GLOBAL FONT SCALE
+================================ */
+
+
+/* ================================
+   PAGE CONTENT (FIXED SCREEN)
+================================ */
+.page-content {
+  flex: 1;
+  height: 100%;
+  overflow: hidden;     /* 🔒 NO SCROLL */
+  display: flex;
+  flex-direction: column;
+}
+
+/* ================================
+   KIOSK MAIN CONTAINER
+================================ */
+.kiosk-container {
+  width: 100%;
+  height: 100vh;        /* ✅ FIXED HEIGHT */
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;     /* 🔒 NO SCROLL */
+  background: transparent;
+}
+
+/* ================================
+   HEADER
+================================ */
+.kiosk-header {
+  flex: 0 0 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background: transparent;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+/* Login (top-right) */
+.login-text {
+  position: absolute;
+  right: 20px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  color: #0b5ed7;
+}
+
+.login-icon {
+  font-size: 20px;
+}
+
+/* ================================
+   TAGLINE
+================================ */
+.kiosk-tagline {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.advanced-tagline h2 {
+  font-size: 22px;
+  font-weight: 600;
+  color: #021144;
+}
+
+.highlight {
+  background: linear-gradient(90deg, #0b6fa4, #00c6ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+}
+
+.main-tag {
+  font-size: 36px;
+  font-weight: 700;
+  color: #0b6fa4;
+  margin-top: 6px;
+}
+
+/* /* ================================
+   HERO SECTION
+================================ */
+.kiosk-hero {
+  flex: 0 0 40%;        /* % based – no overflow */
+  margin: 16px;
+  border-radius: 20px;
+  overflow: hidden;
+
+  background-image: url("../assets/Img/background_aadhaar.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* ================================
+   SERVICES GRID
+================================ */
+.kiosk-services {
+  flex: 1;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+    overflow-y: auto; 
+  overflow: hidden;  
+}
+
+/* ================================
+   INFO / FOOTER SECTION
+================================ */
+.kiosk-footer {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 24px;
+  border-top: 2px solid #021144;
+  background: transparent;
+}
+
+/* Info list */
+.info-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.info-list li {
+  font-size: 18px;
+  font-weight: 600;
+  color: #021144;
+  display: flex;
+  align-items: center;
+}
+
+/* Bullet */
+.info-list li::before {
+  content: "i";
+  width: 32px;
+  height: 32px;
+  margin-right: 12px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #0b6fa4, #00c6ff);
+  color: #fff;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Aadhaar image circle */
+.card-circle {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: #f4f8fb;
+}
+
+.card-circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+} 
+
+/* ================================
+   TOUCH FRIENDLY
+================================ */
+button,
+input,
+select {
+  min-height: 60px;
+  font-size: 1.1rem;
+  touch-action: manipulation;
+}
+
+/* ================================
+   VIRTUAL KEYBOARD
+================================ */
+.virtual-keyboard {
+  transform: scale(1.2);
+  transform-origin: bottom center;
+}
+
+/* ================================
+   WATERMARK (MASCOT)
+================================ */
+body::after {
+  content: "";
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Centers the image perfectly */
+  
+  /* Size of the watermark */
+  width: 500px;  /* Adjust this to make it bigger/smaller */
+  height: 500px;
+  
+  /* Image Setup */
+  background-image: url("../assets/Img/aadhaar_mascot.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  
+  /* Transparency */
+  opacity: 0.15; /* 0.1 is very faint, 1.0 is solid. Adjust as needed */
+  
+  /* CRITICAL SETTING */
+  pointer-events: none; /* This ensures you can click buttons THROUGH the image */
+z-index: -1;
+}
+
+/* ================================
+   GLOBAL WATERMARK STYLE
+================================ */
+.global-watermark {
+  position: fixed;        /* Stays in same spot even if you scroll */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Perfectly centers the image */
+  
+  width: 500px;           /* Adjust size: make 600px or 400px if needed */
+  height: auto;           /* Maintains aspect ratio */
+  
+  opacity: 0.1;           /* Transparency: 0.1 is faint, 1.0 is solid */
+  
+  z-index: 9999;          /* Ensures it sits ON TOP of everything */
+  pointer-events: none;   /* CRITICAL: Allows clicks to pass through the image to buttons below */
+  user-select: none;      /* Prevents user from highlighting the image */
+}

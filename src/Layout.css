@@ -1,0 +1,49 @@
+/* Disable scrolling ONLY on login page */
+.login-layout {
+  height: 100vh;          /* strict height */
+  overflow: hidden;       /* 🔴 stops scrolling */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Content grows but never overflows */
+.login-layout .page-content {
+  flex: 1;
+  overflow: hidden;
+}
+
+/* Footer fixed inside layout */
+.login-footer {
+  background-color: #021144;
+  color: #fff;
+  text-align: center;
+  padding: 12px;
+  font-size: 14px;
+}
+/* ================================
+   GLOBAL WATERMARK STYLE
+================================ */
+.global-watermark {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+  /* 🟢 UPDATED: Increased Size */
+  width: 700px; 
+  height: auto;
+  
+  opacity: 0.1; /* Transparency */
+  z-index: 9999;
+  pointer-events: none; /* Allows clicking through the image */
+  user-select: none;
+  
+  /* Smooth fade transition */
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* 🟢 NEW CLASS: Completely hides watermark */
+.watermark-hidden {
+  opacity: 0;
+  visibility: hidden;
+}

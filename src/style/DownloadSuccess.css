@@ -1,0 +1,115 @@
+.aadhaar-success-wrapper {
+  min-height: 100vh;             
+  display: flex;
+  align-items: center;            
+  justify-content: center;       
+  background: #f5f7fa;            
+  padding: 20px;
+}
+
+.aadhaar-success-container {
+  max-width: 900px;
+  width: 100%;
+  text-align: center;
+}
+.success-icon {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.check-circle {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: #4caf50;
+  color: #fff;
+  font-size: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.success-title {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 25px;
+}
+
+.info-card {
+  text-align: left;
+  background: #fff;
+  border-radius: 6px;
+  padding: 20px 25px;
+  margin-bottom: 25px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  border-top: 4px solid #1e88e5;
+}
+
+.section-title {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 30px 0 15px;
+}
+
+.info-card p {
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+.info-card a {
+  color: #1e88e5;
+  word-break: break-all;
+}
+
+.dashboard-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 40px;
+  font-size: 15px;
+  color: #fff;
+  background: linear-gradient(90deg, #0d47a1, #00acc1);
+  border-radius: 6px;
+  text-decoration: none;
+}
+.info-card {
+  border: 2px dashed #b7c3d7;
+  border-radius: 8px;
+  padding: 25px;
+  margin-top: 25px;
+  background: #f9fbff;
+}
+
+.info-col p {
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+
+.success-title {
+  font-weight: 600;
+  color: #1f5fa9;
+}
+
+.check-circle {
+  background-color: #4caf50;
+  color: white;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.dashboard-btn.yellow {
+  background-color: #f4b400;
+  border: none;
+  padding: 10px 15px;
+  font-weight: 600;
+  border-radius: 6px;
+}
+
+.dashboard-btn.yellow:hover {
+  background-color: #e0a800;
+}

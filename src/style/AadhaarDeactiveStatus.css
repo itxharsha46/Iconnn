@@ -1,0 +1,56 @@
+.uidai-header-aadhaar-deactive {
+    height: 72px;
+      background: linear-gradient(135deg, #e7a40a, #f0c114);
+    border-radius: 12px 12px 0 0;
+    padding: 0 22px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    margin-bottom: 0;
+}
+.kiosk-back-circle-aadhaar-deactive {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #e7a40a, #f0c114);
+    color: #ffffff;
+    font-size: 28px;
+    font-weight: bold;
+    border: none;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.help-icon-aadhar-deactive {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+   background: linear-gradient(135deg, #e7a40a, #f0c114);
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+}
+.faq-modal-header-aadhaar-deactive{
+  
+    padding: 16px 20px;
+    background: linear-gradient(135deg, #e7a40a, #f0c114);
+    color: #fff;
+    border-radius: 14px 14px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}

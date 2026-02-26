@@ -1,0 +1,58 @@
+.verify-success-wrapper {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+}
+
+.verify-success-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.success-icon {
+  width: 110px;
+  height: 110px;
+  margin-bottom: 20px;
+}
+
+.success-message-verify {
+  font-size: 30px;           /* slightly larger text */
+  font-weight: 600;          /* bold for emphasis */
+  color: rgb(14, 103, 145);            /* green to indicate success */
+  text-align: center;         /* center the message */
+
+  margin-top: 15px;
+  animation: fadeIn 1s ease-in-out; /* optional fade-in effect */
+}
+
+/* Optional fade-in animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.verify-success-footer {
+  padding: 20px;
+  border-top: 1px solid #cfd8dc;
+  display: flex;
+  justify-content: center;
+}
+
+.dashboard-btn-verify {
+  min-width: 260px;
+  height: 48px;
+  font-size: 16px;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+background: linear-gradient(135deg, #e7a40a, #f0c114);
+  cursor: pointer;
+}
+
+.dashboard-btn:active {
+  transform: scale(0.98);
+}

@@ -1,0 +1,165 @@
+/* ===== Background ===== */
+.document-bg {
+  min-height: 100vh;
+  background: radial-gradient(circle at top left, #cfe6f4, #9ec3db);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* ===== Main Card ===== */
+.document-card {
+  background: #f3f6f9;
+  width: 100%;
+  max-width: 900px;
+  border-radius: 40px;
+  padding: 50px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+}
+
+/* ===== Title Section ===== */
+.title-section {
+  text-align: center;
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.title-section h2 {
+  font-weight: 700;
+  color: #1d3557;
+  font-size: 28px;
+}
+
+.free-badge {
+  background: linear-gradient(135deg, #b22923, #e2535d);
+  color: white;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 14px;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+/* ===== Custom Accordion ===== */
+.custom-accordion {
+  margin-top: 30px;
+}
+
+.accordion-item-custom {
+  margin-bottom: 20px;
+}
+
+.accordion-btn {
+  width: 100%;
+  background: white;
+  border-radius: 50px;
+  padding: 18px;
+  font-weight: 600;
+  border: none;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  text-align: left;
+  transition: 0.3s ease;
+}
+
+.accordion-btn:hover {
+  transform: scale(1.02);
+}
+
+.accordion-content {
+  padding: 20px;
+  color: #333;
+}
+
+/* ===== Submit Section ===== */
+.submit-section {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.gradient-submit-btn {
+  background: linear-gradient(135deg, #b22923, #e2535d);
+  color: white;
+  padding: 15px 60px;
+  border-radius: 50px;
+  border: none;
+  font-size: 20px;
+  font-weight: bold;
+  box-shadow: 0 15px 30px rgba(29, 155, 240, 0.4);
+  transition: 0.3s ease;
+}
+
+.gradient-submit-btn:hover {
+  transform: scale(1.05);
+}
+
+.need-help-link {
+  margin-top: 15px;
+  color: #1d3557;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* ===== Help Section ===== */
+.help-section {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.help-card {
+  flex: 1;
+  background: linear-gradient(135deg, #f3eeed, #e7dcde);
+  border-radius: 20px;
+  padding: 30px;
+  text-align: center;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.help-card img {
+  width: 35px;
+  margin-bottom: 10px;
+}
+
+
+.help-link {
+  text-decoration: none;
+  color: inherit;
+  flex: 1;
+}
+/* ===== Mascot Image ===== */
+.mascot-image {
+  width: 120px;
+  margin-bottom: 20px;
+  animation: floatMascot 3s ease-in-out infinite;
+}
+
+/* Optional Floating Animation */
+@keyframes floatMascot {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0px); }
+}
+/* ===== Bottom Back Button ===== */
+.bottom-back-wrapper {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.bottom-back-btn {
+  /* background: linear-gradient(90deg, #2ec4b6, #1d9bf0); */
+  border: none;
+  padding: 10px 35px;
+  /* border-radius: 30px; */
+  color: black;
+  font-weight: 600;
+  font-size: 16px;
+  /* box-shadow: 0 8px 20px rgba(29, 155, 240, 0.3);
+  transition: 0.3s ease; */
+}
+

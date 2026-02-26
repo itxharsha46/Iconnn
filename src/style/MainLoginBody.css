@@ -1,0 +1,84 @@
+.main-dashboard {
+  background: transparent;
+  min-height: 100vh;
+}
+
+.section-title {
+      color: #2072a0;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 700;
+    position: relative;
+    width: 100%;
+}
+
+.section-subtitle {
+  font-size: 18px;
+  color: #000000;
+}
+
+
+
+.service-card:hover {
+  transform: translateY(-4px);
+}
+
+.service-icon {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.service-card h6 {
+  font-weight: 600;
+  color: #0a0a0a;
+}
+
+.service-card p {
+  font-size: 13px;
+  color: #555;
+}
+
+.side-card {
+  background: #fff;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.side-header {
+  font-weight: 600;
+  color: #0b3c91;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.side-content {
+  font-size: 14px;
+  color: #666;
+}
+
+.transaction-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+
+.transaction-item {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 12px;
+  font-size: 13px;
+  text-align: center;
+  cursor: pointer;
+}
+.service-card__description{
+        font-size: 14px;
+        line-height: 1.4;
+}
+
+/* .transaction-item:hover {
+  background: #f1f6ff;
+} */

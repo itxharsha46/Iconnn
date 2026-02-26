@@ -1,0 +1,106 @@
+/* Overlay fade animation */
+.popup-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+
+  animation: overlayFadeIn 0.35s ease forwards;
+}
+
+/* Popup container animation */
+.popup-container {
+  background: #ffffff;
+  padding: 36px 52px;
+  border-radius: 22px;
+  width: 720px;
+  max-width: 92%;
+  text-align: center;
+  position: relative; 
+  box-shadow: 0 40px 80px rgba(0, 0, 0, 0.35);
+
+  animation: popupZoomIn 0.45s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/* Message styling */
+.popup-message {
+  font-size: 26px;
+  color: #222;
+  line-height: 1.6;
+  margin-bottom: 36px;
+}
+
+.popup-message div:first-child {
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+/* Button styling */
+.popup-btn {
+  background: linear-gradient(135deg, #b22923, #e2535d);
+  color: #000;
+  border: 2px solid #000;
+  padding: 12px 42px;
+  font-size: 17px;
+  border-radius: 8px;
+  cursor: pointer;
+
+  transition: all 0.25s ease;
+}
+
+/* Hover = confident */
+.popup-btn:hover {
+  background: #000;
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+/* Active = tactile */
+.popup-btn:active {
+  transform: scale(0.95);
+}
+
+/* ✨ Animations */
+@keyframes popupZoomIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.85) translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes overlayFadeIn {
+  from {
+    background: rgba(0, 0, 0, 0);
+  }
+  to {
+    background: rgba(0, 0, 0, 0.55);
+  }
+}
+.popup-mascot {
+  width: 120px;
+  height: auto;
+  margin: 0 auto 20px;
+  display: block;
+
+  animation: mascotFloat 2.8s ease-in-out infinite;
+}
+
+/* Floating mascot animation */
+@keyframes mascotFloat {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}

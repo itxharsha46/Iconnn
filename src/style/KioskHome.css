@@ -1,0 +1,486 @@
+/* =========================
+   MAIN CONTAINER
+========================= */
+.kiosk-container {
+  width: 100%;
+  height: 100vh;          /* FIXED */
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;       /* NO SCROLL */
+}
+
+
+/* =========================
+   HEADER
+========================= */
+.kiosk-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;  
+  position: relative;        
+  height: 100px;
+  background-color: #f5f5f5;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+/* Center buttons */
+.language-switch {
+  display: flex;
+  gap: 14px;
+}
+
+/* Login fixed to right */
+.login-text {
+  position: absolute;
+  right: 20px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.language-switch button {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  background: #e9f1fb;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+
+.kiosk-hero {
+  width: calc(100% - 40px); 
+  margin: 0 auto;        
+  min-height: 650px;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+}
+
+
+.hero-carousel {
+  width: 100%;
+  height: 100%;
+
+  background-size: cover;       
+  background-position: center center; 
+  background-repeat: no-repeat;
+
+  transition: opacity 0.8s ease-in-out;
+}
+
+
+
+
+/* =========================
+   SERVICES GRID
+========================= */
+.kiosk-services {
+  padding: 30px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  align-items: start;  
+  margin-top:30px!important;
+}
+
+.split-card {
+  display: flex;
+  align-items: stretch;
+  height: 86px;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 2px solid #0b6fa4;
+  background: #ffffff;
+
+  /* 🔹 STRONGER 3D SHADOW */
+  box-shadow: 
+    0 10px 25px rgba(11, 111, 164, 0.25),
+    0 5px 15px rgba(11, 111, 164, 0.2),
+    0 2px 6px rgba(11, 111, 164, 0.15);
+}
+
+.split-card:hover {
+  transform: translateY(-8px) scale(1.05); /* lift higher on hover */
+
+  /* 🔹 STRONGER hover shadow */
+  box-shadow: 
+    0 18px 40px rgba(11, 111, 164, 0.35),
+    0 10px 20px rgba(11, 111, 164, 0.25),
+    0 4px 10px rgba(11, 111, 164, 0.2);
+}
+
+
+.card-left {
+  width: 90px;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-left img {
+  width: 52px;
+  height: 52px;
+  object-fit: contain;
+}
+
+.card-right {
+  flex: 1;
+  background: linear-gradient(135deg, #021144, #0b6fa4);
+  display: flex;
+  align-items: center;
+  padding: 0 22px;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+
+
+
+/* =========================
+   TOUCHSCREEN OPTIMIZATION
+========================= */
+button,
+.service-card,
+.footer-icon {
+  touch-action: manipulation;
+  user-select: none;
+}
+
+/* =========================
+   PAGINATION (KIOSK)
+========================= */
+.kiosk-pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin: 20px 0;
+}
+
+.kiosk-pagination button {
+  padding: 14px 26px;
+  font-size: 18px;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  background: linear-gradient(135deg, #021144, #0b6fa4);
+  color: white;
+}
+
+.kiosk-pagination button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.page-indicator {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+}
+.kiosk-tagline {
+  text-align: center;
+  margin: 0 20px;     
+  margin-top: 10px!important;   
+  position: relative;
+  z-index: 2;
+}
+
+
+.animated-tagline {
+  font-size: 22px;
+  font-weight: 600;
+  color: #021144;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+  animation: fadeInUp 1s ease forwards;
+}
+
+.animated-tagline .highlight {
+  background: linear-gradient(90deg, #0b6fa4, #00c6ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+  animation: gradientShift 3s ease infinite;
+}
+
+.main-tag {
+  font-size: 36px;
+  font-weight: 700;
+  color: #0b6fa4;
+  animation: fadeInUp 1.2s ease forwards;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.animated-tagline .highlight {
+  background-size: 200% 200%;
+}
+.advanced-tagline {
+  text-align: center;
+  /* margin: 50px 20px; */
+  position: relative;
+  z-index: 2;
+}
+
+.advanced-tagline h2 {
+  font-size: 22px;
+  font-weight: 600;
+  color: #021144;
+  letter-spacing: 1px;
+}
+
+.highlight {
+  background: linear-gradient(90deg, #0b6fa4, #00c6ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+  /* animation removed so it stays static */
+}
+
+.main-tag.bounce {
+  font-size: 36px;
+  font-weight: 700;
+  color: #0b6fa4;
+  margin-top: 10px;
+  animation: bounce 2s infinite;
+}
+
+/* Bounce effect */
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+.info-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  margin-top: 40px!important;
+  flex-direction: column;
+  gap: 7px; /* space between items */
+}
+
+.info-list li {
+  display: flex;
+  align-items: center;
+  font-size: 18px; /* bigger text */
+  font-weight: 600;
+  color: #021144;
+  line-height: 1.1;
+  position: relative;
+}
+
+/* Gradient circular bullet */
+.info-list li::before {
+  content: "";
+  flex-shrink: 0;
+  width: 36px;  /* bullet size */
+  height: 36px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #0b6fa4, #00c6ff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 15px;
+  position: relative;
+  box-shadow: 0 0 12px rgba(11, 111, 164, 0.5);
+}
+
+/* Number / "i" inside bullet */
+.info-list li::after {
+  content: "i"; /* you can replace with "1", "2", "3" if you want numbered bullets */
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+}
+.kiosk-info {
+  display: flex;             /* Make left and right divs sit side by side */
+  align-items: center;       /* Vertically center them */
+  justify-content: space-between; /* Space between left and right */
+  gap: 20px;                 /* Optional: space between columns */
+  padding: 20px;
+}
+
+/* Left side: the list */
+.info-left {
+  flex: 1;                   /* Take available space */
+}
+
+/* Right side: the image */
+.info-right {
+  flex: 0 0 auto;            /* Fit content only */
+  display: flex;
+  justify-content: center;   /* Center the image horizontally in its container */
+  align-items: center;
+}
+
+.card-circle {
+  width: 120px;              /* Circle size */
+  height: 120px;
+  border-radius: 50%;        /* Makes it circular */
+  overflow: hidden;          /* Crop the image to circle */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f4f8fb; /* Optional background */
+}
+
+.card-circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;         /* Ensures image fills circle */
+}
+
+
+/* Full circular login button */
+.login-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 120px;          /* Circle width */
+  height: 120px;         /* Circle height */
+  border-radius: 50%;    /* Makes it circular */
+  background: linear-gradient(135deg, #021144, #0b6fa4);
+  color: white;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  text-align: center;
+}
+
+/* Icon inside circle */
+.login-button svg {
+  margin-bottom: 8px;  /* space between icon and text */
+  color: white;
+}
+
+/* Hover effect */
+.login-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Text styling */
+.login-button span {
+  color: white;
+  font-weight: 600;
+  font-size: 16px;
+}
+.login-text {
+  display: inline-flex;   
+  align-items: center;
+  gap: 6px;                 
+  cursor: pointer;
+  font-weight: 600;
+  color: #0b5ed7;
+}
+
+.login-icon {
+  font-size: 20px;           
+}
+
+/* .horizontal-line {
+  width: 100%;
+  height: 2px;
+  background-color: #021144; 
+  margin: 25px auto;
+  display: block;
+} */
+/* Make info section behave like footer without design change */
+.kiosk-footer {
+  border-top: 2px solid #021144;   /* Blue horizontal line */
+  padding-top: 20px;              /* Space between line and content */
+  margin-top: 50px;               /* Space from services section */
+}
+/* Language dropdown fixed to RIGHT */
+.language-dropdown {
+  position: absolute;
+  right: 120px;        /* adjust if login is also on right */
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1000;
+}
+
+/* Button */
+.language-btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+
+  /* 🇮🇳 Indian flag gradient */
+  background: linear-gradient(
+    135deg,
+    #ff9933 0%,    /* Saffron */
+    #ffffff 50%,  /* White */
+    #138808 100%  /* Green */
+  );
+
+  color: #021144;   /* dark blue text for contrast */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+
+/* Dropdown menu */
+.language-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;            /* menu aligns to button right */
+  margin-top: 6px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  display: none;
+  overflow: hidden;
+  z-index: 10;
+}
+
+/* Show on hover */
+.language-dropdown:hover .language-menu {
+  display: block;
+}
+
+.language-menu button {
+  width: 100%;
+  padding: 10px 16px;
+  border: none;
+  background: white;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: left;
+}
+
+.language-menu button:hover {
+  background: #e9f1fb;
+}

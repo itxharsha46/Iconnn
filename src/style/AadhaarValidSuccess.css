@@ -1,0 +1,73 @@
+.success-container {
+  min-height: 100vh;
+  background: #f3f6f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.success-card {
+  width: 520px;
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.success-icon-val {
+  width: 90px;
+  height: 90px;
+  margin: 0 auto 15px;
+  border-radius: 50%;
+  background: green;
+  color: white;
+  font-size: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.aadhaar-number {
+  color: #1f7aa8;
+  margin-bottom: 5px;
+}
+
+.verification-text {
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.details-box {
+  text-align: left;
+  background: #f8f9fb;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.row-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.row-item:last-child {
+  border-bottom: none;
+}
+
+.info-text {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #444;
+}
+
+.dashboard-btn-val {
+  margin-top: 20px;
+   background: linear-gradient(135deg, #146139, #319246);
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 6px;
+  cursor: pointer;
+}

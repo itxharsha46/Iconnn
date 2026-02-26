@@ -1,0 +1,16 @@
+.app-header {
+  border-bottom: 2px solid #ffffff; /* white line */
+}
+/* Disable text selection */
+body {
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+
+}
+input, textarea {
+  user-select: text !important;
+}
+.app-layout {
+  background: transparent !important;
+}
