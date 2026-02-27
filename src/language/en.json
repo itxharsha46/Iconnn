@@ -1,6 +1,5 @@
 {
   "welcome_title": "Welcome to myAadhaar Kiosk",
-
   "download_aadhaar": "Download Aadhaar",
   "retrieve_aadhaar": "Retrieve Aadhaar number / EID / SID",
   "verify_email_mobile": "Verify Email / Mobile",
@@ -17,19 +16,15 @@
   "bank_seeding": "Bank seeding status",
   "grievance_feedback": "Grievance and feedback",
   "grievance_status": "Check Grievance / Feedback Status",
-
   "english": "English",
   "hindi": "Hindi",
   "regional": "Regional",
-
   "download_eaadhaar": "Download Your e-Aadhaar",
   "select_id_type": "Select Aadhaar / Enrolment / VID / SID",
-
   "aadhaar_number": "Aadhaar Number",
   "enrolment_id": "Enrolment ID",
   "virtual_id": "Virtual ID",
   "sid": "SID",
-
   "enter_aadhaar": "Enter Aadhaar Number",
   "enter_enrolment": "Enter 14 digit Enrolment Number",
   "select_date": "Select Date",
@@ -37,189 +32,131 @@
   "enter_virtual_id": "Enter 16 digit Virtual ID",
   "enter_sid": "Enter SID (S + 27 digits)",
   "enter_captcha": "Enter Captcha",
-
   "send_otp": "Send OTP",
   "resend_otp": "Resend OTP",
   "verify_download": "Verify & Download",
   "enter_otp": "Enter OTP",
-
   "masked_aadhaar": "Do you want a masked Aadhaar?",
   "faq_title": "Frequently Asked Questions",
-
   "please_wait": "Please wait...",
   "loading": "Loading...",
-
   "aadhaar_required": "Aadhaar is required",
   "aadhaar_12_digits": "Aadhaar must be 12 digits",
   "digits_only": "Only digits are allowed",
   "captcha_required": "Captcha is required",
   "server_error": "Server error. Please try again.",
-
-
-    "eaadhaar_fetched": "Your eAadhaar has been successfully fetched",
-
+  "eaadhaar_fetched": "Your eAadhaar has been successfully fetched",
   "password_info_title": "Your eAadhaar password will be of 7/8 characters in length.",
-
   "password_info_desc1": "If your name contains more than 3 letters, your eAadhaar password will be a combination of the first four letters of your name followed by the year of birth.",
-
   "password_info_desc2": "If your name contains only 3 letters, your eAadhaar password will be a combination of the first three letters of your name followed by the year of birth.",
-
   "example1": "Example 1:",
   "example2": "Example 2:",
-
   "enter_pdf_password": "Enter PDF password",
-
   "processing": "Processing...",
   "print": "Print",
-
   "enter_pdf_password_error": "Please enter PDF password",
   "invalid_pdf_password": "Please enter valid PDF password",
   "pdf_not_available": "PDF data not available",
-
   "printing_wait": "Your Aadhaar card is printing. Please wait...",
   "collect_aadhaar": "Please collect your Aadhaar card.",
   "printer_not_available": "Printer not available. Please contact admin",
   "invalid_pdf_or_password": "Invalid PDF or password",
   "pdf_failed": "Failed to open PDF. Please check password.",
-
   "name": "Name",
   "dob": "Date of Birth",
   "example1_text": "If your name is <1>ANISH Y KUMAR</1> and your Year of Birth is <3>1989</3>, then your eAadhaar password will be <5>ANIS1989</5>",
-
-"example2_text": "If your name is <1>RIA</1> and your Year of Birth is <3>1989</3>, then your eAadhaar password will be <5>RIA1989</5>",
-"or": "OR",
-"verify_continue": "Verify & Continue",
-"name_required": "Name is required",
-"dob_required": "Date of Birth is required",
-"mobile_required": "Enter mobile number or email",
-"invalid_mobile": "Mobile number must be exactly 10 digits",
-"invalid_email": "Invalid email address",
-"name_invalid_alphabets": "Name should contain only alphabets",
-"captcha_not_loaded": "Captcha not loaded",
- "aadhaar_sent_message": "Your Aadhaar number {{aadhaar}} is sent to your registered mobile number.",
+  "example2_text": "If your name is <1>RIA</1> and your Year of Birth is <3>1989</3>, then your eAadhaar password will be <5>RIA1989</5>",
+  "or": "OR",
+  "verify_continue": "Verify & Continue",
+  "name_required": "Name is required",
+  "dob_required": "Date of Birth is required",
+  "mobile_required": "Enter mobile number or email",
+  "invalid_mobile": "Mobile number must be exactly 10 digits",
+  "invalid_email": "Invalid email address",
+  "name_invalid_alphabets": "Name should contain only alphabets",
+  "captcha_not_loaded": "Captcha not loaded",
+  "aadhaar_sent_message": "Your Aadhaar number {{aadhaar}} is sent to your registered mobile number.",
   "check_mobile_message": "Please check your registered mobile number to retrieve your Aadhaar details.",
- 
-
   "verify_details_title": "Please Enter Required Details to Verify Email / Mobile Number",
   "verify_mobile": "Verify Mobile Number",
   "verify_email": "Verify Email Address",
-
   "enter_mobile": "Enter Mobile Number",
   "enter_email": "Enter Email Address",
-
   "submit": "Submit",
   "enter_verification_code": "Enter Verification Code",
   "verify": "Verify",
-
-
   "email_required": "Email is required",
-
   "verification_code_invalid": "Enter valid 6-digit code",
   "invalid_verification_code": "Invalid verification code",
   "something_wrong": "Something went wrong. Please try again.",
-    "verification_successful": "Verification Successful",
+  "verification_successful": "Verification Successful",
   "mobile_verified_success": "Entered Mobile number has been successfully verified.",
   "go_home": "Go To Home",
-    "generate_retrieve_vid": "Generate or Retrieve VID",
+  "generate_retrieve_vid": "Generate or Retrieve VID",
   "please_select": "Please Select",
   "generate_vid": "Generate VID",
   "retrieve_vid": "Retrieve VID",
-
   "verify_otp": "Verify OTP",
-
   "play_audio_captcha": "Play Audio Captcha",
   "refresh_captcha": "Refresh",
-  
-
   "aadhaar_invalid_12": "Enter valid 12-digit Aadhaar number",
   "aadhaar_must_12": "Aadhaar must be 12 digits",
-
   "captcha_expired": "Captcha expired. Please refresh.",
   "otp_invalid_6": "Enter valid 6-digit OTP",
-    "vid_sent_message": "Your Virtual ID (VID) has been sent to your Aadhaar registered mobile number",
+  "vid_sent_message": "Your Virtual ID (VID) has been sent to your Aadhaar registered mobile number",
   "vid_info_message": "In case you have changed your mobile number or wish to change your registered Email, you are required to get it updated in your Aadhaar as soon as possible.",
   "lock_unlock_title": "Lock/Unlock Aadhaar",
   "how_it_works": "How it works",
-
   "virtual_id_title": "Virtual ID",
   "virtual_id_desc": "To Lock/Unlock your Aadhaar, you must use your 16-digit Virtual ID (VID).",
-
   "lock_aadhaar_title": "Lock your Aadhaar",
   "lock_aadhaar_desc": "Once your VID has been generated, proceed to lock your Aadhaar with your VID.",
-
   "unlock_aadhaar_title": "Unlock your Aadhaar",
   "unlock_aadhaar_desc": "To unlock your Aadhaar, please return here and use your VID.",
-
   "generate_vid_helper": "If you don't have one, please",
   "generate_vid_link": "generate your VID",
   "from_dashboard": "first from the Dashboard.",
-
   "lock_helper_text": "Once locked, authentication via your Aadhaar number is disabled.",
   "unlock_helper_text": "Unlocking will also restore your ability to use your Aadhaar number.",
-
   "back": "Back",
   "next": "Next",
-
   "lock_aadhaar": "Lock Aadhaar",
   "unlock_aadhaar": "Unlock Aadhaar",
-
   "enter_vid": "Enter Virtual ID Number",
   "enter_full_name": "Enter Full Name",
   "enter_pincode": "Enter Pincode",
-
- 
   "sending": "Sending...",
   "otp_sent": "OTP Sent",
-
-
-
   "vid_required": "Virtual ID is required",
   "vid_16_digits": "Virtual ID must be 16 digits",
-
-
-
   "pincode_required": "Pincode is required",
   "pincode_6_digits": "Pincode must be 6 digits",
-
- 
   "otp_6_digits": "OTP must be 6 digits",
-
- 
-
   "declaration_lock": "I understand that after locking my Aadhaar, I will be able to perform authentication using only Virtual ID (VID) and not Aadhaar Number.",
-  
-
-"check_pvc_order_status_title": "Check Aadhaar PVC Card Order Status",
-
-"enter_srn_label": "Enter SRN",
-"srn_required": "SRN is required",
-"srn_invalid": "SRN must be 14 characters (S + 13 digits)",
-
-"current_status": "Current Status",
-"order_date": "Order Date",
-"awb_number": "Air Way Bill Number",
-"dispatch_date": "Date of Dispatch",
-
-"order_status_result": "Order Status Details",
-"check_deceased_status_title": "Check Deceased Aadhaar Deactivation Status",
-
-"enter_sid_27": "Enter 'S' followed by 27 digit number",
-
-"sid_required": "SID is required",
-"sid_must_start": "SID must start with 'S'",
-"sid_only_digits": "Only digits allowed after 'S'",
-"sid_27_digits": "SID must be 'S' followed by 27 digits",
-"sid_length_exceeded": "SID length exceeded",
-
-"captcha_refresh_error": "Captcha not loaded. Please refresh.",
-"captcha_verification_failed": "Captcha verification failed. Try again.",
-"check_aadhaar_validity_title": "Check Aadhaar Validity",
-"proceed": "Proceed",
-"aadhaar_verification_completed": "Aadhaar Verification Completed",
-"age_band": "Age Band",
-"state": "State",
-"aadhaar_document_update_required": "This Aadhaar number requires Document (Proof of Identity - POI document & Proof of Address - POA) update. Please upload the documents through https://myaadhaar.uidai.gov.in or visit nearby Aadhaar Seva Kendra.",
-
+  "check_pvc_order_status_title": "Check Aadhaar PVC Card Order Status",
+  "enter_srn_label": "Enter SRN",
+  "srn_required": "SRN is required",
+  "srn_invalid": "SRN must be 14 characters (S + 13 digits)",
+  "current_status": "Current Status",
+  "order_date": "Order Date",
+  "awb_number": "Air Way Bill Number",
+  "dispatch_date": "Date of Dispatch",
+  "order_status_result": "Order Status Details",
+  "check_deceased_status_title": "Check Deceased Aadhaar Deactivation Status",
+  "enter_sid_27": "Enter 'S' followed by 27 digit number",
+  "sid_required": "SID is required",
+  "sid_must_start": "SID must start with 'S'",
+  "sid_only_digits": "Only digits allowed after 'S'",
+  "sid_27_digits": "SID must be 'S' followed by 27 digits",
+  "sid_length_exceeded": "SID length exceeded",
+  "captcha_refresh_error": "Captcha not loaded. Please refresh.",
+  "captcha_verification_failed": "Captcha verification failed. Try again.",
+  "check_aadhaar_validity_title": "Check Aadhaar Validity",
+  "proceed": "Proceed",
+  "aadhaar_verification_completed": "Aadhaar Verification Completed",
+  "age_band": "Age Band",
+  "state": "State",
+  "aadhaar_document_update_required": "This Aadhaar number requires Document (Proof of Identity - POI document & Proof of Address - POA) update. Please upload the documents through https://myaadhaar.uidai.gov.in or visit nearby Aadhaar Seva Kendra.",
   "appointment": {
     "loginTitle": "Login to Appointment Portal",
     "otpAuth": "via OTP Authentication",
@@ -236,17 +173,17 @@
     "enterOtp": "Enter OTP",
     "authenticate": "Authenticate with OTP",
     "name_required": "Name is required",
-"mobile_required_appointment": "Mobile number is required",
-"email_required_appointment": "Email is required",
-"invalid_email_format": "Please enter a valid email address",
-"invalid_captcha": "Invalid captcha. Please try again.",
-"something_wrong": "Something went wrong. Please try again."
+    "mobile_required_appointment": "Mobile number is required",
+    "email_required_appointment": "Email is required",
+    "invalid_email_format": "Please enter a valid email address",
+    "invalid_captcha": "Invalid captcha. Please try again.",
+    "something_wrong": "Something went wrong. Please try again."
   },
   "common": {
     "back": "Back"
   },
   "bank_seeding_login_title": "Login to Aadhaar via OTP",
-    "selectDetails": "Select details",
+  "selectDetails": "Select details",
   "residentIndian": "Resident Indian",
   "selectAgeGroup": "Select Age Group",
   "age0to5": "0-5 Years",
@@ -259,10 +196,9 @@
   "searchAadhaarSevaKendra": "Search Aadhaar Seva Kendra",
   "pincodeSearch": "Pincode Search",
   "searchByPincode": "Search By Pincode",
-
   "searchNearbyCentres": "Search nearby centres (within 1 - 49 kms)",
   "enterRange": "Enter range",
-    "checkEnrolmentOrUpdateStatus": "Check Enrolment or Update Status",
+  "checkEnrolmentOrUpdateStatus": "Check Enrolment or Update Status",
   "checkIfAadhaarGenerated": "Check if your Aadhaar is generated or updated.",
   "enrolment14DigitInfo": "The 14 digit enrolment number printed on acknowledgement slip.",
   "lostEidText": "In case you lost EID you can retrieve it.",
@@ -275,7 +211,6 @@
   "enterSidNumber": "Enter 'S' followed by 27 digit number",
   "enterSrnNumber": "Enter SRN number",
   "enterCaptcha": "Enter Captcha",
-
   "frequentlyAskedQuestions": "Frequently Asked Questions",
   "enterDetailsToCheckStatus": "Enter your details and submit to check your Aadhaar status.",
   "draft": "Draft",
@@ -284,17 +219,15 @@
   "validation": "Validation",
   "completed": "Completed",
   "aadhaarUpdatedMessage": "Your Aadhaar has been updated. While your Aadhaar is being printed and posted to you, please download eAadhaar from",
-    "checkGrievanceStatus": "Check Grievance / Feedback Status",
+  "checkGrievanceStatus": "Check Grievance / Feedback Status",
   "enterServiceRequestNumber": "Enter Service Request Number",
-
   "grievanceFeedbackNumber": "Grievance / Feedback Number",
   "status": "Status",
-
   "serviceNumberRequired": "Service Request Number is required",
   "captchaRequired": "Captcha is required",
   "captchaNotLoaded": "Captcha not loaded",
   "invalidCaptchaOrService": "Invalid Captcha or Service Number",
-    "uploadTitle": "Upload documents in support of identity and address",
+  "uploadTitle": "Upload documents in support of identity and address",
   "whatToSubmit": "What to submit?",
   "howToSubmit": "How to submit?",
   "whatToSubmitContent": "Ration card, Voter identity card, Government-issued identity card/certificate having address, and Indian Passport serve as proof of both identity and address.\n\nPAN card, Driving license, Secondary or Senior School mark sheet serve as proof of identity only.\n\nElectricity/water/gas bill (last 3 months), Bank passbook, rent/lease agreement serve as proof of address only.",
@@ -304,7 +237,7 @@
   "videoGuide": "Video guide",
   "knowMore": "Know More?",
   "callTollFree": "Call toll-free (1947)",
-    "grievanceFeedback": "Grievance and Feedback",
+  "grievanceFeedback": "Grievance and Feedback",
   "enterRequiredDetails": "Please enter required details",
   "enterName": "Enter Name as per Aadhaar*",
   "enterMobile": "Enter Mobile Number*",
@@ -318,14 +251,10 @@
   "mode": "Mode*",
   "enterSRN": "Enter Service Request Number (SRN) *",
   "enterEID": "Enter 14 / 28 digit Enrolment Number",
-
   "enterURN": "Enter 8 digit URN Number",
   "supportingDocument": "Select Supporting Document (if any)",
-
-
   "pleaseWait": "Please wait...",
   "faqTitle": "Frequently Asked Questions",
-
   "nameRequired": "Name is required",
   "mobileRequired": "Mobile number is required",
   "mobileInvalid": "Enter valid 10 digit mobile number",
@@ -335,29 +264,24 @@
   "grievanceTypeRequired": "Please select grievance type",
   "categoryRequired": "Please select category type",
   "grievanceTextRequired": "Grievance details are required",
- 
-
   "online": "Online",
   "offline": "Offline",
   "maadhaar": "mAadhaar mobile app",
   "onlineHelp": "Enter 14 digit ID starting with S13 or S22",
   "offlineHelp": "Enter 28 digit Enrolment ID",
   "maadhaarHelp": "Enter 8 digit URN",
-    "grievanceSuccessMessage": "Your grievance/feedback has been registered successfully. Please note your service request number (SRN) {{srn}} for further communication.",
+  "grievanceSuccessMessage": "Your grievance/feedback has been registered successfully. Please note your service request number (SRN) {{srn}} for further communication.",
   "shareExperience": "Please share your experience while filing your Grievance / Feedback by rating below",
   "feedbackPlaceholder": "Please share your feedback",
-    "login": "Login",
+  "login": "Login",
   "enterAadhaar": "Enter Aadhaar Number",
-
   "getOtp": "Get OTP",
   "otpGenerated": "Successfully generated One Time Password (OTP)",
   "enterOtp": "Enter OTP",
-  
   "invalidOtp": "Invalid OTP",
-   "reportDeathTitle": "Report Death of a Family Member",
-
+  "reportDeathTitle": "Report Death of a Family Member",
   "loginWithOtp": "Login With OTP",
-    "tokenGenerationTitle": "Token Generation & Receipt",
+  "tokenGenerationTitle": "Token Generation & Receipt",
   "enterVisitorDetails": "Enter Visitor Details",
   "fullName": "Full Name",
   "mobileNumber": "Mobile Number",
@@ -366,23 +290,128 @@
   "generateReceipt": "Generate Receipt",
   "pleaseCollectReceipt": "Please collect your receipt",
   "receiptSummary": "Receipt Summary",
-
   "mobile": "Mobile",
   "service": "Service",
   "date": "Date",
   "ok": "OK",
   "welcomeTitle": "Welcome to Home page of Appointment Portal. Please select from below choices for booking appointment",
-"centreAppointment": "Centre Appointment",
-"centreDescription": "This facility is for booking an appointment at an Aadhaar Seva Kendra for Aadhaar Enrolment and Update Services",
-"manageAppointments": "Manage Appointments",
-"manageDescription": "Status of various requests originated by you in the recent past. You can check the detailed status by clicking on the downward arrow icon.",
-"noAppointments": "No Appointments available"
-
-
-  
-
-
-
-
-
+  "centreAppointment": "Centre Appointment",
+  "centreDescription": "This facility is for booking an appointment at an Aadhaar Seva Kendra for Aadhaar Enrolment and Update Services",
+  "manageAppointments": "Manage Appointments",
+  "manageDescription": "Status of various requests originated by you in the recent past. You can check the detailed status by clicking on the downward arrow icon.",
+  "noAppointments": "No Appointments available",
+  "faqs": [
+    {
+      "category": "Enrolment & Update",
+      "topics": [
+        { "title": "Aadhaar Enrolment Process", "qas": [{ "q": "What is the Aadhaar Enrolment Process?", "a": "You can enrol for Aadhaar at any authorized Aadhaar Seva Kendra. Bring valid Proof of Identity (PoI) and Proof of Address (PoA) documents." }] },
+        { "title": "Aadhaar Update", "qas": [{ "q": "How do I update my Aadhaar details?", "a": "You can update demographic details online via myAadhaar or visit a nearby Aadhaar center for biometric updates." }] },
+        { "title": "Enrolment Partners/Ecosystem Partners", "qas": [{ "q": "Who are Enrolment Partners?", "a": "Registrars and Enrolment Agencies are authorized partners who help UIDAI in enrolling residents across India." }] },
+        { "title": "Enrolling Children", "qas": [{ "q": "How do I enrol a child below 5 years?", "a": "For children below 5 years, biometrics are not captured. Their Aadhaar is linked to their parent's Aadhaar." }] },
+        { "title": "Language & Transliteration", "qas": [{ "q": "Can I get Aadhaar in my local language?", "a": "Update this answer text here..." }] },
+        { "title": "Training, Testing & Certification", "qas": [{ "q": "How to become a certified operator?", "a": "Update this answer text here..." }] },
+        { "title": "Date of Birth Update in Aadhaar", "qas": [{ "q": "What documents are needed for DoB update?", "a": "Update this answer text here..." }] },
+        { "title": "Lost/Forgotten Aadhaar", "qas": [{ "q": "How can I retrieve a lost Aadhaar?", "a": "Update this answer text here..." }] },
+        { "title": "myAadhaar - Online Update Service", "qas": [{ "q": "What details can be updated online?", "a": "Update this answer text here..." }] },
+        { "title": "Aadhaar Seva Kendra", "qas": [{ "q": "How to locate an Aadhaar Seva Kendra?", "a": "Update this answer text here..." }] },
+        { "title": "Enrolling Differently-abled", "qas": [{ "q": "What is the process for differently-abled residents?", "a": "Update this answer text here..." }] },
+        { "title": "Aadhaar Enrolment & Update Charges", "qas": [{ "q": "What are the fees for updating Aadhaar?", "a": "Update this answer text here..." }] },
+        { "title": "Assam NRC Cases", "qas": [{ "q": "Details regarding Assam NRC cases?", "a": "Update this answer text here..." }] },
+        { "title": "Resident Foreign Nationals", "qas": [{ "q": "Can a foreign national apply for Aadhaar?", "a": "Update this answer text here..." }] },
+        { "title": "Mandatory Biometric Update (MBU)", "qas": [{ "q": "What is Mandatory Biometric Update?", "a": "Children must update their biometrics upon reaching 5 and 15 years of age. This is mandatory and free of cost." }] }
+      ]
+    },
+    {
+      "category": "Your Aadhaar",
+      "topics": [
+        {
+          "title": "Use Aadhaar Freely",
+          "qas": [
+            { "q": "1. Can a fraudster withdraw money from my Aadhaar linked bank account if he knows my Aadhaar number or has my Aadhaar card?", "a": "Just by knowing your Aadhaar number or Aadhaar linked bank account, no one can withdraw money from Aadhaar linked bank account." },
+            { "q": "2. Does linking my bank account, PAN, and other services with Aadhaar make me vulnerable?", "a": "No. UIDAI does not have visibility of linking of your Aadhaar with any other services. Concern departments such as bank, income tax etc. do not share any information of Aadhaar number holder neither UIDAI stores any such informations." },
+            { "q": "3. Why am I asked to verify Bank account, Demat account, PAN and various other services with Aadhaar?", "a": "Aadhaar verification/authentication is governed by the sections of Aadhaar Act, 2016, under which the use case has been notified by the concerned Ministry/Department for providing services." },
+            { "q": "4. There are many agencies that simply accept physical copy of Aadhaar and do not carry out any biometric or OTP authentication or verification. Is this a good practice?", "a": "No, in this connection MeitY has issued detailed instructions to all Government Ministries/Departments vide office memorandum no 10(22)/2017-EG-II(VOL-1) dated 19.06.2023." },
+            { "q": "5. I gave my Aadhaar card to a service provider for proving my identity. Can anyone harm me by knowing and misusing my Aadhaar number?", "a": "No. Just, by knowing your Aadhaar number, no one can harm you. To prove your identity, Aadhaar number is verfied/authenticated by agencies through various modes as prescribed under Aadhaar Act, 2016." },
+            { "q": "6. If Aadhaar has to be freely used for proving identity and it is safe to do so, then why has UIDAI advised people not to put up their Aadhaar number in Social Media or public domain?", "a": "You use PAN card, debit card, credit card, bank cheques wherever required. But do you put these details openly on internet and social media such as Facebook, Twitter, etc.? Obviously no! You do not put such personal details unnecessarily in public domain so that there is no unwarranted invasion attempt on your privacy. The same logic needs to be applied in case of uses of Aadhaar." },
+            { "q": "7. Recently, UIDAI has issued an advisory asking people not to share their Aadhaar number openly in the public domain especially on Social Media or other public platforms. Does this mean that I should not use Aadhaar freely?", "a": "You should use your Aadhaar without any hesitation for proving your identity and doing transactions, just like you use your bank account number, PAN card, debit card, credit card, etc., wherever required. What UIDAI has advised is that Aadhaar card should be freely used for proving identity and doing transactions, but should not be put on public platforms like Twitter, Facebook, etc. People give their debit card or credit card details or cheque (which has bank account number) when they purchase goods, or pay school fee, water, electricity, telephone and other utility bills, etc. Similarly, you can freely use your Aadhaar to establish your identity as and when required without any fear. While using Aadhaar, you should do the same level of due diligence as you do in case of other ID cards – not more, not less." }
+          ]
+        },
+        {
+          "title": "Aadhaar Letter",
+          "qas": [
+            { "q": "1. How do I link PAN with Aadhaar?", "a": "For linking your PAN with Aadhaar, you may visit the website of Income Tax Department and follow the instructions." },
+            { "q": "2. What is Aadhaar PVC Card? Is it equivalent to paper based laminated Aadhaar Letter?", "a": "Aadhaar PVC card is PVC based Aadhaar card which can be ordered online by paying nominal charges.\n\nYes.Aadhaar PVC card is equivalent to paper based Aadhaar letter." },
+            { "q": "3. I applied for Aadhaar earlier but did not get it. So, I re-applied. When will I get my Aadhaar?", "a": "If your Aadhaar was generated from the first Enrolment then every attempt to re-enrol will be rejected. DO NOT re-apply. You can retrieve your Aadhaar:\n\n(a) Online using Retrieve EID/UID service available on https://myaadhaar.uidai.gov.in/ (if you have the registered mobile no)\n\n(b) By visiting any enrolment centre\n\n(c) By dialing 1947" },
+            { "q": "4. I recently updated my Aadhaar. Can you please expedite it? I need it urgently.", "a": "Aadhaar update has a fixed process which takes up to 90 days from the date of update request. The update process cannot be altered. You may check the status from\n\nhttps://myaadhaar.uidai.gov.in/CheckAadhaarStatus" },
+            { "q": "5. I updated my Aadhaar recently. However, the status still shows 'in process'. When will it get updated?", "a": "Aadhaar update takes up to 90 days. If your update request is more than 90 days old, then please dial 1947 (toll free) or write to help@uidai.gov.in for further assistance." },
+            { "q": "6. After I get Enroled, how long will it take to get my Aadhaar letter? And how do I get my Aadhaar letter?", "a": "Aadhaar generation may take up to 90 days from the date of enrolment. Aadhaar letter is delivered by ordinary post at the registered address of the Aadhaar Number holder." },
+            { "q": "7. What if Aadhaar letter is not delivered to the Aadhaar Number holder?", "a": "If Aadhaar Number holder does not receive Aadhaar letter, he/she should contact UIDAI contact center with his/her Enrolment number or may check Aadhaar status online at https://myaadhaar.uidai.gov.in/CheckAadhaarStatus. Meanwhile Aadhaar Number holder can download e-Aadhaar.\n\nYou are also requested to verify the correctness of the address in eAadhaar and update the same accordingly (if required)." },
+            { "q": "8. What if an Aadhaar Number holder misplaces his Aadhaar number?", "a": "a) Aadhaar number holder can find his Aadhaar number using Aadhaar Service - Retrieve Lost UID/EID available on https://myaadhaar.uidai.gov.in/\n\nb) Aadhaar number holder can call 1947 where our Contact Centre Agent will help him/her in getting his/her EID and the same can be used to download his/her eAadhaar from MyAadhaar Portal - Download Aadhaar\n\nc) Aadhaar number holder can also get his/her Aadhaar number from EID number on IVRS system by calling 1947" }
+          ]
+        },
+        {
+          "title": "mAadhaar FAQs",
+          "qas": [
+            { "q": "1. How resident can create profile on mAadhaar app?", "a": "Only someone with an Aadhaar linked to a registered mobile number can create Aadhaar profile in the mAadhaar app. They can register their profile in an App installed in any smartphone. However the OTP will be sent to only their registered mobile. Steps to register Aadhaar profile are given below:\n\n1. Launch the app.\n2. Tap on the Register Aadhaar tab on the top of main dashboard\n3. Create a 4 digit Pin/Password (memorize this password, as it will be required to access profile)\n4. Provide Valid Aadhaar & enter valid Captcha\n5. Enter Valid OTP and submit\n6. The profile should get registered\n7. The registered tab would now display the registered Aadhaar Name\n8. Tap on My Aadhaar tab on the bottom menu\n9. Enter 4-digit Pin/Password\n10. My Aadhaar Dashboard appears" },
+            { "q": "2. What are the Key Features of mAadhaar?", "a": "Key Features of mAadhaar:\n\n1. Easy Access for Android and Apple Users - Accessible on Play Store for Android and App Store for Apple users.\n\n2. Track Aadhaar Authentication History - Allows users to track their Aadhaar authentication history.\n\n3. Biometric Lock/Unlock - Provides the option to lock and unlock biometrics for enhanced security.\n\n4. Download Aadhaar Card - Users can download their Aadhaar card directly from the app.\n\n5. Order PVC Aadhaar Card - Facilitates ordering of a PVC Aadhaar card directly through the app for a nominal fee of Rs 50.\n\n6. Review Aadhaar Update History - Allows users to review their Aadhaar update history.\n\n7. Update Address - Enables users to update their Aadhaar-linked address seamlessly through the app." },
+            { "q": "3. Is a registered mobile number necessary for using mAadhaar services?", "a": "No, you can use the mAadhaar app without one, but only for limited services like ordering a PVC card or verifying Aadhaar. To access all services and use mAadhaar as your digital identity, a registered mobile number is mandatory for OTP verification." },
+            { "q": "4. What is Aadhaar PVC Card? Is it equivalent to paper based laminated Aadhaar Letter?", "a": "Aadhaar PVC card is PVC based Aadhaar card which can be ordered online by paying nominal charges.\n\nYes.Aadhaar PVC card is equivalent to paper based Aadhaar letter." },
+            { "q": "5. I applied for Aadhaar earlier but did not get it. So, I re-applied. When will I get my Aadhaar?", "a": "If your Aadhaar was generated from the first Enrolment then every attempt to re-enrol will be rejected. DO NOT re-apply. You can retrieve your Aadhaar:\n\n(a) Online using Retrieve EID/UID service available on https://myaadhaar.uidai.gov.in/ (if you have the registered mobile no)\n\n(b) By visiting any enrolment centre\n\n(c) By dialing 1947" },
+            { "q": "6. I recently updated my Aadhaar. Can you please expedite it? I need it urgently.", "a": "Aadhaar update has a fixed process which takes up to 90 days from the date of update request. The update process cannot be altered. You may check the status from\n\nhttps://myaadhaar.uidai.gov.in/CheckAadhaarStatus" },
+            { "q": "7. I updated my Aadhaar recently. However, the status still shows 'in process'. When will it get updated?", "a": "Aadhaar update takes up to 90 days. If your update request is more than 90 days old, then please dial 1947 (toll free) or write to help@uidai.gov.in for further assistance." },
+            { "q": "8. After I get Enroled, how long will it take to get my Aadhaar letter? And how do I get my Aadhaar letter?", "a": "Aadhaar generation may take up to 90 days from the date of enrolment. Aadhaar letter is delivered by ordinary post at the registered address of the Aadhaar Number holder." },
+            { "q": "9. What if Aadhaar letter is not delivered to the Aadhaar Number holder?", "a": "If Aadhaar Number holder does not receive Aadhaar letter, he/she should contact UIDAI contact center with his/her Enrolment number or may check Aadhaar status online at https://myaadhaar.uidai.gov.in/CheckAadhaarStatus. Meanwhile Aadhaar Number holder can download e-Aadhaar.\n\nYou are also requested to verify the correctness of the address in eAadhaar and update the same accordingly (if required)." },
+            { "q": "10. I applied for Aadhaar earlier but did not get it. So, I re-applied. When will I get my Aadhaar?", "a": "If your Aadhaar was generated from the first Enrolment then every attempt to re-enrol will be rejected. DO NOT re-apply. You can retrieve your Aadhaar:\n\n(a) Online using Retrieve EID/UID service available on https://myaadhaar.uidai.gov.in/ (if you have the registered mobile no)\n\n(b) By visiting any enrolment centre\n\n(c) By dialing 1947" },
+            { "q": "11. I recently updated my Aadhaar. Can you please expedite it? I need it urgently.", "a": "Aadhaar update has a fixed process which takes up to 90 days from the date of update request. The update process cannot be altered. You may check the status from\n\nhttps://myaadhaar.uidai.gov.in/CheckAadhaarStatus" },
+            { "q": "12. I updated my Aadhaar recently. However, the status still shows 'in process'. When will it get updated?", "a": "Aadhaar update takes up to 90 days. If your update request is more than 90 days old, then please dial 1947 (toll free) or write to help@uidai.gov.in for further assistance." },
+            { "q": "13. After I get Enroled, how long will it take to get my Aadhaar letter? And how do I get my Aadhaar letter?", "a": "Aadhaar generation may take up to 90 days from the date of enrolment. Aadhaar letter is delivered by ordinary post at the registered address of the Aadhaar Number holder." },
+            { "q": "14. What if Aadhaar letter is not delivered to the Aadhaar Number holder?", "a": "If Aadhaar Number holder does not receive Aadhaar letter, he/she should contact UIDAI contact center with his/her Enrolment number or may check Aadhaar status online at https://myaadhaar.uidai.gov.in/CheckAadhaarStatus. Meanwhile Aadhaar Number holder can download e-Aadhaar.\n\nYou are also requested to verify the correctness of the address in eAadhaar and update the same accordingly (if required)." }
+          ]
+        },
+        { "title": "Aadhaar Features, Eligibility", "qas": [{ "q": "Who is eligible for Aadhaar?", "a": "Update this answer text here..." }] },
+        { "title": "Security in UIDAI system", "qas": [{ "q": "Is my data secure in the UIDAI system?", "a": "Yes, UIDAI uses state-of-the-art encryption to secure all biometric and demographic data." }] },
+        { "title": "Use of Aadhaar", "qas": [{ "q": "Where can Aadhaar be used?", "a": "Update this answer text here..." }] },
+        { "title": "Protection of Individual Information", "qas": [{ "q": "How is my personal information protected?", "a": "Update this answer text here..." }] },
+        { "title": "NRI & Aadhaar", "qas": [{ "q": "Can an NRI apply for Aadhaar?", "a": "Update this answer text here..." }] },
+        { "title": "PAN & Aadhaar", "qas": [{ "q": "How to link PAN with Aadhaar?", "a": "Update this answer text here..." }] },
+        { "title": "MyAadhaar Portal", "qas": [{ "q": "What services are on the MyAadhaar Portal?", "a": "Update this answer text here..." }] }
+      ]
+    },
+    {
+      "category": "Authentication",
+      "topics": [
+        { "title": "For Aadhaar Number Holders", "qas": [{ "q": "How does Aadhaar authentication work?", "a": "Update this answer text here..." }] },
+        { "title": "Offline verification and role of OVSEs", "qas": [{ "q": "What is offline verification?", "a": "Update this answer text here..." }] }
+      ]
+    },
+    {
+      "category": "Direct Benefit Transfer (DBT)",
+      "topics": [
+        { "title": "Aadhaar for Direct Benefit Transfer (DBT)", "qas": [{ "q": "How does DBT work with Aadhaar?", "a": "Linking Aadhaar to your bank account allows you to receive government subsidies directly into your account." }] }
+      ]
+    },
+    {
+      "category": "CRM Division",
+      "topics": [
+        { "title": "Grievance Redressal Mechanism", "qas": [{ "q": "How can I file a grievance?", "a": "You can file a grievance via the UIDAI portal, by calling 1947, or by emailing help@uidai.gov.in." }] },
+        { "title": "UIDAI Chatbot - Aadhaar Mitra", "qas": [{ "q": "What is Aadhaar Mitra?", "a": "Aadhaar Mitra is an AI-powered chatbot available on the UIDAI website to answer your queries instantly." }] }
+      ]
+    },
+    {
+      "category": "Aadhaar Online Services",
+      "topics": [
+        { "title": "E-Aadhaar", "qas": [{ "q": "What is e-Aadhaar?", "a": "e-Aadhaar is a password-protected electronic copy of Aadhaar, digitally signed by UIDAI." }] },
+        { "title": "Virtual ID (VID)", "qas": [{ "q": "What is a Virtual ID?", "a": "VID is a 16-digit revocable random number mapped to your Aadhaar for secure authentication." }] },
+        { "title": "Online Address Update Process", "qas": [{ "q": "How to update address online?", "a": "Update this answer text here..." }] },
+        { "title": "Aadhaar Authentication History", "qas": [{ "q": "How to check authentication history?", "a": "Update this answer text here..." }] },
+        { "title": "Secure QR Code Reader (beta)", "qas": [{ "q": "How to use the secure QR code?", "a": "Update this answer text here..." }] },
+        { "title": "Aadhaar Paperless Offline e-kyc", "qas": [{ "q": "What is paperless offline e-KYC?", "a": "Update this answer text here..." }] },
+        { "title": "Biometric Lock/Unlock", "qas": [{ "q": "How do I lock my biometrics?", "a": "Update this answer text here..." }] },
+        { "title": "Aadhaar Lock/Unlock", "qas": [{ "q": "How do I lock my Aadhaar number?", "a": "Update this answer text here..." }] },
+        { "title": "Aadhaar SMS Service", "qas": [{ "q": "What is the Aadhaar SMS service?", "a": "Update this answer text here..." }] },
+        { "title": "Order Aadhaar PVC Card", "qas": [{ "q": "How do I order a PVC card?", "a": "Update this answer text here..." }] },
+        { "title": "Document Update", "qas": [{ "q": "Why do I need to update my documents?", "a": "Update this answer text here..." }] }
+      ]
+    }
+  ]
 }

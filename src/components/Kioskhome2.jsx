@@ -19,9 +19,11 @@ const Kioskhome2 = () => {
 
   // Modal State
   const [isFaqOpen, setIsFaqOpen] = useState(false);
-  
-  // Search State
   const [searchQuery, setSearchQuery] = useState("");
+
+  // Nested Accordion State
+  const [expandedTopic, setExpandedTopic] = useState(null); 
+  const [expandedSubQuestion, setExpandedSubQuestion] = useState(null); 
 
   const changeLanguage = (lang) => {
     i18n.changeLanguage(lang);
@@ -30,19 +32,16 @@ const Kioskhome2 = () => {
 
   useEffect(() => {
     let timeout;
-    const idleTime = 60000; // 60 seconds
+    const idleTime = 60000;
 
     const resetTimer = () => {
       clearTimeout(timeout);
-      timeout = setTimeout(() => {
-        navigate("/"); // Redirect to Initial Page
-      }, idleTime);
+      timeout = setTimeout(() => navigate("/"), idleTime);
     };
 
     const events = ["mousemove", "mousedown", "click", "scroll", "keypress", "touchstart"];
     events.forEach((event) => window.addEventListener(event, resetTimer));
-
-    resetTimer(); // Start timer immediately
+    resetTimer(); 
 
     return () => {
       clearTimeout(timeout);
@@ -50,95 +49,35 @@ const Kioskhome2 = () => {
     };
   }, [navigate]);
 
-  // --- Complete FAQ Data from Your Images & Video ---
-  const faqData = [
-    {
-      category: "Enrolment & Update",
-      items: [
-        "Aadhaar Enrolment Process",
-        "Aadhaar Update",
-        "Enrolment Partners/Ecosystem Partners",
-        "Enrolling Children",
-        "Language & Transliteration",
-        "Training, Testing & Certification",
-        "Date of Birth Update in Aadhaar",
-        "Lost/Forgotten Aadhaar",
-        "myAadhaar - Online Update Service",
-        "Aadhaar Seva Kendra",
-        "Enrolling Differently-abled",
-        "Aadhaar Enrolment & Update Charges",
-        "Assam NRC Cases",
-        "Resident Foreign Nationals",
-        "Mandatory Biometric Update (MBU)"
-      ]
-    },
-    {
-      category: "Your Aadhaar",
-      items: [
-        "Use Aadhaar Freely",
-        "Aadhaar Letter",
-        "mAadhaar FAQs",
-        "Aadhaar Features, Eligibility",
-        "Security in UIDAI system",
-        "Use of Aadhaar",
-        "Protection of Individual Information in UIDAI System",
-        "NRI & Aadhaar",
-        "PAN & Aadhaar",
-        "MyAadhaar Portal"
-      ]
-    },
-    {
-      category: "Authentication",
-      items: [
-        "For Aadhaar Number Holders",
-        "Offline verification and role of OVSEs under Authentication Eco-system"
-      ]
-    },
-    {
-      category: "Direct Benefit Transfer (DBT)",
-      items: [
-        "Aadhaar for Direct Benefit Transfer (DBT)"
-      ]
-    },
-    {
-      category: "CRM Division",
-      items: [
-        "Grievance Redressal Mechanism",
-        "UIDAI Chatbot - Aadhaar Mitra"
-      ]
-    },
-    {
-      category: "Aadhaar Online Services",
-      items: [
-        "E-Aadhaar",
-        "Virtual ID (VID)",
-        "Online Address Update Process",
-        "Aadhaar Authentication History",
-        "Secure QR Code Reader (beta)",
-        "Aadhaar Paperless Offline e-kyc",
-        "Biometric Lock/Unlock",
-        "Aadhaar Lock/Unlock",
-        "Aadhaar SMS Service",
-        "Order Aadhaar PVC Card",
-        "Document Update"
-      ]
-    }
-  ];
+  // --- FETCH DYNAMIC FAQ DATA FROM JSON FILES ---
+  // This replaces the hardcoded array and connects to en.json, hi.json, etc.
+  const rawFaqData = t("faqs", { returnObjects: true });
+  const faqData = Array.isArray(rawFaqData) ? rawFaqData : [];
 
-  // Filter Logic for Search
+  // Deep Search Filter Logic (Updated with safety checks for JSON data)
   const filteredFaqs = faqData.map(section => {
-    const isCategoryMatch = section.category.toLowerCase().includes(searchQuery.toLowerCase());
-    const matchedItems = section.items.filter(item => item.toLowerCase().includes(searchQuery.toLowerCase()));
+    const isCategoryMatch = (section.category || "").toLowerCase().includes(searchQuery.toLowerCase());
     
-    if (isCategoryMatch || matchedItems.length > 0) {
-      return {
-        ...section,
-        items: isCategoryMatch ? section.items : matchedItems
-      };
+    const matchedTopics = (section.topics || []).map(topic => {
+      const isTopicMatch = (topic.title || "").toLowerCase().includes(searchQuery.toLowerCase());
+      const matchedQas = (topic.qas || []).filter(qa => 
+        (qa.q || "").toLowerCase().includes(searchQuery.toLowerCase()) || 
+        (qa.a || "").toLowerCase().includes(searchQuery.toLowerCase())
+      );
+
+      if (isTopicMatch || matchedQas.length > 0) {
+        return { ...topic, qas: isTopicMatch ? topic.qas : matchedQas };
+      }
+      return null;
+    }).filter(Boolean);
+    
+    if (isCategoryMatch || matchedTopics.length > 0) {
+      return { ...section, topics: isCategoryMatch ? section.topics : matchedTopics };
     }
     return null;
   }).filter(Boolean);
 
+  // Array map for services grid...
   const services = [
     { key: "download_aadhaar", color: "red", icon: Download, path: "/e-aadhaar-download" },
     { key: "retrieve_aadhaar", color: "orange", icon: Retrieve, path: "/retrieve-aadhaar" },
@@ -160,20 +99,20 @@ const Kioskhome2 = () => {
 
   return (
     <div className="kiosk-container">
+      {/* Header and Banner */}
       <div className="header-row">
         <h1 className="kiosk-title">{t("welcome_title")}</h1>
-
         <div className="language-buttons">
           <button className={`lang-btn ${i18n.language === "en" ? "active" : ""}`} onClick={() => changeLanguage("en")}>{t("english")}</button>
           <button className={`lang-btn ${i18n.language === "hi" ? "active" : ""}`} onClick={() => changeLanguage("hi")}>{t("hindi")}</button>
           <button className={`lang-btn ${i18n.language === "kn" ? "active" : ""}`} onClick={() => changeLanguage("kn")}>{t("regional")}</button>
         </div>
       </div>
-
       <div className="kiosk-banner">
         <img src={Mascot} alt="UIDAI Mascot" className="banner-img" />
       </div>
 
+      {/* Main Grid */}
       <div className="services-grid">
         {services.map((item, index) => (
           <div key={index} className={`service-card ${item.color}`} onClick={() => item.path && navigate(item.path)}>
@@ -183,131 +122,111 @@ const Kioskhome2 = () => {
         ))}
       </div>
 
-      {/* --- Floating FAQ Corner Icon --- */}
+      {/* Floating FAQ Button */}
       <div 
         onClick={() => setIsFaqOpen(true)}
         title="FAQ"
         style={{
-          position: "fixed",
-          bottom: "40px",      
-          right: "40px",       
-          backgroundColor: "#ffffff",
-          border: "3px solid #2e7d32", 
-          borderRadius: "50%", 
-          width: "70px",
-          height: "70px",
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          cursor: "pointer",
-          boxShadow: "0px 4px 10px rgba(0,0,0,0.3)",
-          zIndex: 1000,
-          transition: "all 0.3s ease"
-        }}
-        onMouseOver={(e) => {
-          e.currentTarget.style.transform = 'scale(1.1)';
-          e.currentTarget.style.boxShadow = "0px 6px 15px rgba(0,0,0,0.4)";
-        }}
-        onMouseOut={(e) => {
-          e.currentTarget.style.transform = 'scale(1)';
-          e.currentTarget.style.boxShadow = "0px 4px 10px rgba(0,0,0,0.3)";
+          position: "fixed", bottom: "40px", right: "40px", backgroundColor: "#ffffff",
+          border: "3px solid #2e7d32", borderRadius: "50%", width: "70px", height: "70px",
+          display: "flex", justifyContent: "center", alignItems: "center", cursor: "pointer",
+          boxShadow: "0px 4px 10px rgba(0,0,0,0.3)", zIndex: 1000, transition: "all 0.3s ease"
         }}
       >
         <img src={FaqIcon} alt="FAQ" style={{ width: "40px", height: "40px", display: "block" }} />
       </div>
 
-      {/* --- Kiosk Video Style Full Screen FAQ Modal --- */}
+      {/* Full Screen FAQ Modal */}
       {isFaqOpen && (
         <div style={{
-          position: "fixed", top: 0, left: 0, right: 0, bottom: 0,
-          backgroundColor: "#f5f6f8", 
-          zIndex: 9999, 
-          display: "flex", flexDirection: "column",
-          fontFamily: "'Segoe UI', Roboto, Helvetica, Arial, sans-serif"
+          position: "fixed", top: 0, left: 0, right: 0, bottom: 0, backgroundColor: "#f5f6f8", 
+          zIndex: 9999, display: "flex", flexDirection: "column", fontFamily: "'Segoe UI', Roboto, sans-serif"
         }}>
           
-          {/* Top Bar with Title and Close Button */}
-          <div style={{ 
-            backgroundColor: "#fff", 
-            padding: "30px 60px", 
-            display: "flex", 
-            justifyContent: "space-between", 
-            alignItems: "center",
-            boxShadow: "0 2px 5px rgba(0,0,0,0.05)"
-          }}>
-            {/* Title font size massive for Kiosk */}
-            <h2 style={{ margin: 0, color: "#333", fontSize: "54px", fontWeight: "normal" }}>Frequently Asked Questions</h2>
-            <button 
-              onClick={() => setIsFaqOpen(false)}
-              style={{ fontSize: "64px", background: "none", border: "none", cursor: "pointer", color: "#666", lineHeight: "1", padding: "0 20px" }}
-            >
-              &times;
-            </button>
+          <div style={{ backgroundColor: "#fff", padding: "30px 60px", display: "flex", justifyContent: "space-between", alignItems: "center", boxShadow: "0 4px 10px rgba(0,0,0,0.05)" }}>
+            <h2 style={{ margin: 0, color: "#333", fontSize: "50px", fontWeight: "normal" }}>{t("faq_title") || "Frequently Asked Questions"}</h2>
+            <button onClick={() => setIsFaqOpen(false)} style={{ fontSize: "60px", background: "none", border: "none", cursor: "pointer", color: "#666", lineHeight: "1" }}>&times;</button>
           </div>
 
-          {/* Search Area */}
-          <div style={{ padding: "40px 60px 20px 60px" }}>
-            <div style={{ position: "relative", maxWidth: "1200px" }}>
-              {/* Search bar font size and padding massive */}
-              <input 
-                type="text" 
-                placeholder="Search for FAQs" 
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                style={{
-                  width: "100%", 
-                  padding: "25px 30px", 
-                  fontSize: "32px",
-                  borderRadius: "12px", 
-                  border: "2px solid #d1d5db",
-                  backgroundColor: "#fff",
-                  outline: "none",
-                  color: "#374151"
-                }}
-              />
-            </div>
+          <div style={{ padding: "50px 60px 20px 60px" }}>
+            <input 
+              type="text" placeholder="Search for FAQs" value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)}
+              style={{ width: "90%", padding: "25px 30px", fontSize: "30px", borderRadius: "15px", border: "2px solid #d1d5db", outline: "none" }}
+            />
           </div>
 
-          {/* Main List Content - Scrollable */}
+          {/* Render Nested Lists */}
           <div style={{ flex: 1, overflowY: "auto", padding: "10px 60px 60px 60px" }}>
-            {filteredFaqs.map((section, index) => (
-              <div key={index} style={{ marginBottom: "45px" }}>
-                {/* Category Header font size massive */}
-                <h3 style={{ 
-                  fontSize: "42px", 
-                  color: "#1f2937", 
-                  marginBottom: "25px", 
-                  marginTop: "20px",
-                  fontWeight: "600"
-                }}>
-                  {section.category}
-                </h3>
+            {filteredFaqs.length > 0 ? (
+              filteredFaqs.map((section, categoryIndex) => (
+                <div key={categoryIndex} style={{ marginBottom: "50px" }}>
+                  <h3 style={{ fontSize: "40px", color: "#1f2937", marginBottom: "25px", fontWeight: "600" }}>{section.category}</h3>
 
-                {/* List Items Container */}
-                <div style={{ backgroundColor: "#fff", borderRadius: "12px", border: "1px solid #e5e7eb", overflow: "hidden" }}>
-                  {section.items.map((item, itemIndex) => (
-                    <div 
-                      key={itemIndex} 
-                      onClick={() => alert(`Clicked: ${item}`)} 
-                      style={{ 
-                        padding: "30px 40px", // Huge touch padding
-                        borderBottom: itemIndex === section.items.length - 1 ? "none" : "2px solid #f3f4f6", // Slightly thicker separator
-                        fontSize: "34px", // Massive font size for readable kiosk list items
-                        color: "#4b5563",
-                        cursor: "pointer",
-                        display: "flex",
-                        alignItems: "center",
-                        transition: "background-color 0.1s"
-                      }}
-                      onMouseOver={(e) => e.currentTarget.style.backgroundColor = "#f9fafb"}
-                      onMouseOut={(e) => e.currentTarget.style.backgroundColor = "#fff"}
-                    >
-                      {item}
-                    </div>
-                  ))}
+                  <div style={{ backgroundColor: "#fff", borderRadius: "15px", border: "1px solid #e5e7eb", overflow: "hidden" }}>
+                    {section.topics.map((topic, topicIndex) => {
+                      const topicId = `${categoryIndex}-${topicIndex}`;
+                      const isTopicOpen = expandedTopic === topicId;
+
+                      return (
+                        <div key={topicIndex} style={{ borderBottom: topicIndex === section.topics.length - 1 ? "none" : "1px solid #f3f4f6" }}>
+                          
+                          {/* 1. TOPIC HEADER ("Use Aadhaar Freely", etc.) */}
+                          <div 
+                            onClick={() => setExpandedTopic(isTopicOpen ? null : topicId)} 
+                            style={{ 
+                              padding: "30px 35px", fontSize: "34px", color: isTopicOpen ? "#1e3a8a" : "#4b5563",
+                              backgroundColor: isTopicOpen ? "#f0f4f8" : "#fff", cursor: "pointer",
+                              display: "flex", justifyContent: "space-between", alignItems: "center",
+                              fontWeight: isTopicOpen ? "600" : "normal"
+                            }}
+                          >
+                            <span>{topic.title}</span>
+                            <span style={{ fontSize: "40px" }}>{isTopicOpen ? "▼" : "▶"}</span>
+                          </div>
+
+                          {/* 2. INNER QUESTIONS LIST (Visible only if Topic is open) */}
+                          {isTopicOpen && (
+                            <div style={{ backgroundColor: "#f9fafb", padding: "10px 0" }}>
+                              {topic.qas.map((qa, qaIndex) => {
+                                const qaId = `${topicId}-${qaIndex}`;
+                                const isSubOpen = expandedSubQuestion === qaId;
+
+                                return (
+                                  <div key={qaIndex} style={{ padding: "0 35px", marginBottom: "10px" }}>
+                                    
+                                    {/* INNER QUESTION BAR */}
+                                    <div 
+                                      onClick={(e) => { e.stopPropagation(); setExpandedSubQuestion(isSubOpen ? null : qaId); }}
+                                      style={{
+                                        padding: "20px 25px", backgroundColor: "#fff", border: "1px solid #e5e7eb",
+                                        borderRadius: "10px", cursor: "pointer", display: "flex", justifyContent: "space-between",
+                                        alignItems: "center", fontSize: "28px", color: "#374151", boxShadow: "0 1px 3px rgba(0,0,0,0.05)"
+                                      }}
+                                    >
+                                      <span style={{ width: "90%" }}>{qa.q}</span>
+                                      <span style={{ fontSize: "35px", color: "#2e7d32" }}>{isSubOpen ? "−" : "+"}</span>
+                                    </div>
+
+                                    {/* INNER ANSWER */}
+                                    {isSubOpen && (
+                                      <div style={{ padding: "20px 25px", fontSize: "26px", color: "#4b5563", lineHeight: "1.6", borderLeft: "4px solid #2e7d32", marginLeft: "20px", marginTop: "10px", whiteSpace: "pre-wrap" }}>
+                                      {qa.a}
+                                      </div>
+                                    )}
+                                  </div>
+                                );
+                              })}
+                            </div>
+                          )}
+                        </div>
+                      );
+                    })}
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))
+            ) : (
+              <p style={{ fontSize: "30px", color: "#6b7280", textAlign: "center", marginTop: "50px" }}>No FAQs found.</p>
+            )}
           </div>
 
         </div>
