@@ -50,11 +50,10 @@ const Kioskhome2 = () => {
   }, [navigate]);
 
   // --- FETCH DYNAMIC FAQ DATA FROM JSON FILES ---
-  // This replaces the hardcoded array and connects to en.json, hi.json, etc.
   const rawFaqData = t("faqs", { returnObjects: true });
   const faqData = Array.isArray(rawFaqData) ? rawFaqData : [];
 
-  // Deep Search Filter Logic (Updated with safety checks for JSON data)
+  // Deep Search Filter Logic
   const filteredFaqs = faqData.map(section => {
     const isCategoryMatch = (section.category || "").toLowerCase().includes(searchQuery.toLowerCase());
     
@@ -77,7 +76,6 @@ const Kioskhome2 = () => {
     return null;
   }).filter(Boolean);
 
-  // Array map for services grid...
   const services = [
     { key: "download_aadhaar", color: "red", icon: Download, path: "/e-aadhaar-download" },
     { key: "retrieve_aadhaar", color: "orange", icon: Retrieve, path: "/retrieve-aadhaar" },
@@ -122,18 +120,36 @@ const Kioskhome2 = () => {
         ))}
       </div>
 
-      {/* Floating FAQ Button */}
+{/* Floating FAQ Button */}
       <div 
+        className="faq-hover-effect"
         onClick={() => setIsFaqOpen(true)}
-        title="FAQ"
+        title="Need Help? View FAQs"
         style={{
-          position: "fixed", bottom: "40px", right: "40px", backgroundColor: "#ffffff",
-          border: "3px solid #2e7d32", borderRadius: "50%", width: "70px", height: "70px",
-          display: "flex", justifyContent: "center", alignItems: "center", cursor: "pointer",
-          boxShadow: "0px 4px 10px rgba(0,0,0,0.3)", zIndex: 1000, transition: "all 0.3s ease"
+          position: "fixed", 
+          bottom: "40px", 
+          right: "40px", 
+          backgroundColor: "transparent",    /* Removed the white background */
+          border: "none",                    /* Removed the green border */
+          borderRadius: "50%", 
+          width: "110px",                    /* Made it MUCH bigger */
+          height: "110px",                   /* Made it MUCH bigger */
+          display: "flex", 
+          justifyContent: "center", 
+          alignItems: "center", 
+          cursor: "pointer", 
+          padding: "0",   
+          boxShadow: "0px 6px 15px rgba(0,0,0,0.3)", /* Keeps a nice drop shadow */
+          zIndex: 1000, 
+          transition: "all 0.3s ease"        
         }}
       >
-        <img src={FaqIcon} alt="FAQ" style={{ width: "40px", height: "40px", display: "block" }} />
+        <img src={FaqIcon} alt="FAQ" style={{ 
+          width: "100%",                     /* Makes the icon fill the entire space */
+          height: "100%",                    /* Makes the icon fill the entire space */
+          display: "block", 
+          objectFit: "contain" 
+        }} />
       </div>
 
       {/* Full Screen FAQ Modal */}
@@ -170,7 +186,7 @@ const Kioskhome2 = () => {
                       return (
                         <div key={topicIndex} style={{ borderBottom: topicIndex === section.topics.length - 1 ? "none" : "1px solid #f3f4f6" }}>
                           
-                          {/* 1. TOPIC HEADER ("Use Aadhaar Freely", etc.) */}
+                          {/* 1. TOPIC HEADER */}
                           <div 
                             onClick={() => setExpandedTopic(isTopicOpen ? null : topicId)} 
                             style={{ 
@@ -184,7 +200,7 @@ const Kioskhome2 = () => {
                             <span style={{ fontSize: "40px" }}>{isTopicOpen ? "▼" : "▶"}</span>
                           </div>
 
-                          {/* 2. INNER QUESTIONS LIST (Visible only if Topic is open) */}
+                          {/* 2. INNER QUESTIONS LIST */}
                           {isTopicOpen && (
                             <div style={{ backgroundColor: "#f9fafb", padding: "10px 0" }}>
                               {topic.qas.map((qa, qaIndex) => {

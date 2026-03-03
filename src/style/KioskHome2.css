@@ -249,4 +249,8 @@ gap: 50px 33px;
   box-shadow: 0 0 0 2px rgba(20, 97, 57, 0.4);
 }
 
-
+/* FAQ Button Hover Animation */
+.faq-hover-effect:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 20px rgba(46, 125, 50, 0.4), 0 4px 6px rgba(46, 125, 50, 0.25); 
+}
